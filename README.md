@@ -1,2 +1,2 @@
-# https://github.com/gjulcarimaa/
+# github.com/gjulcarimaa/
 es una pagina web
