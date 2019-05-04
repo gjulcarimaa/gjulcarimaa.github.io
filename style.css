@@ -1,0 +1,241 @@
+
+
+body {
+  font-family: "arial";
+  font-size: 12pt;
+  line-height: 175%;
+  color: white;
+  margin: 10px;
+  background-color:#959459;
+  /*padding: 25px 5px 5px 5px; /* top right bottom left */
+}
+
+
+div {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin: 0px;
+    /*max-width: 90%;
+    min-width: 20%;*/
+}
+
+
+h1 { 
+    display: block;
+    color: #ca9703;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+
+h2 {
+  color: #EA4335;
+}
+
+
+.column {
+    float: left;
+    padding: 20px;
+    background-color:#4c4c4c;
+
+}
+
+.left {
+  width: 35%;
+ /*padding-left: 30px;*/
+
+}
+
+
+.middle {
+  width: 65%;
+  /*padding-right: 30px;*/
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h3 {
+  font-family: "PT Sans";
+  font-size: 12pt;
+  /*line-height: 175%;*/
+  font-weight: normal; 
+  color: LightPink;
+  font-style: italic
+
+  }
+
+
+h4 {
+  font-family: "PT Serif", serif;
+  text-align: center; 
+  line-height: 140%;
+  color: LightPink;
+  font-weight: normal
+}
+
+.contact {
+  font-family: "PT Sans";
+  font-weight: bold;
+  color: #C0C0C0;
+  text-align: left;
+  line-height: 35%;
+}
+
+.title, .author {
+  display: none;
+}
+
+.footer {
+  font-family: "PT Serif", serif;
+  font-size: 90%;
+  color: #ababab;
+  line-height: 140%;
+}
+
+hr.footer {
+  margin-top: 10%;
+}
+
+code, pre {
+  font-family: "Droid Sans Mono", monospace;
+  font-size: 10pt;
+}
+
+a:link {
+    color: #f9f9c5;
+    background-color:transparent;
+    text-decoration:none;
+}
+a:visited {
+    color: #b68d17;
+    background-color:transparent;
+    text-decoration:underline;
+}
+a:hover {
+    color: #ca9703;
+    background-color:transparent;
+    text-decoration:underline;
+}
+a:active {
+    color: #ca9703;
+    background-color:transparent;
+    text-decoration:underline;
+}
+
+
+.pages {
+  width: 100%;
+  float: center;
+  margin: 0% 0 0 0;
+  padding: 0;
+  list-style: none;
+  /*background-color: #FFFFFF;*/
+  border-bottom: 1px solid #FFFFFF;
+  border-top: 1px solid #FFFFFF;
+  font-family: "PT Sans", sans-serif;
+  font-size: 120%;
+  text-align: center; 
+  padding-top: 7px;
+  padding-bottom: 17px;
+  border-right: #ccc;
+}
+
+
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 70%;*/ 
+}
+
+
+
+
+
+.fotocentral {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+    max-width: 70%;
+    height: auto;
+    width: auto\9; /* ie8 */
+/*    -webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 
+    filter: grayscale(10%);
+*/
+
+}
+
+img {
+    transition: all 0.5s linear;
+}
+
+.middle img{
+     width: 27%;
+     float: left
+    	
+}
+
+.middle img:hover{
+     transform: scale(0.9);  
+    	
+}
+
+.separador1{
+    height:10px;
+    clear: both;
+}
+    
+.separador2{
+    width:3%;
+    height: 1px;
+    float:left;
+}
+
+
+/* a paragraph proceeded by another paragraph will have a top margin */
+p + p {
+    margin-top: 0px;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+    
+    IMG.displayed {display:none} 
+
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+  .column {
+        width: 100%;
+    }
+  IMG.displayed {display:none} 
+
+}
+
+
+
+</style>
