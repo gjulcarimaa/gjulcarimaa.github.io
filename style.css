@@ -168,7 +168,7 @@ a:active {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 20%;
+    border-radius: 10%;
     max-width: 70%;
     height: auto;
     width: auto\9; /* ie8 */
