@@ -23,7 +23,7 @@ div {
 
 h1 { 
     display: block;
-    color: #2aafb0;
+    color: #034F84;
     font-size: 2em;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
@@ -41,7 +41,7 @@ h2 {
 .column {
     float: left;
     padding: 20px;
-    background-color:#7E8083;
+    background-color:#696565;
 
 }
 
