@@ -4,7 +4,7 @@ body {
   font-family: "arial";
   font-size: 12pt;
   line-height: 175%;
-  color: black;
+  color: white;
   margin: 10px;
   background-color:#cccccc;
   /*padding: 25px 5px 5px 5px; /* top right bottom left */
@@ -23,7 +23,7 @@ div {
 
 h1 { 
     display: block;
-    color: #ca9703;
+    color: #2aafb0;
     font-size: 2em;
     margin-top: 0.67em;
     margin-bottom: 0.67em;
