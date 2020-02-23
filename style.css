@@ -159,8 +159,14 @@ a:active {
     /*width: 70%;*/ 
 }
 
-
-
+.fotobook {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10%;
+    max-width: 20%;
+    height: auto;
+    width: 20%;
 
 
 .fotocentral {
