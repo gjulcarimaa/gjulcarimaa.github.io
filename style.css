@@ -159,11 +159,7 @@ a:active {
     /*width: 70%;*/ 
 }
 
-.fotobook {
-    float: left;
-    border-radius: 10%;
-    height: 5px;
-    width: 5%;
+
 
 
 .fotocentral {
@@ -194,6 +190,15 @@ img {
      transform: scale(0.9);
       border-radius: 5%;
     	
+}
+
+.fotobook {
+    float: left;
+    border-radius: 10%;
+    height: 5px;
+    width: 5%;
+
+
 }
 
 .separador1{
