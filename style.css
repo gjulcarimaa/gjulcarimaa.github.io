@@ -160,8 +160,6 @@ a:active {
 }
 
 
-
-
 .fotocentral {
     display: block;
     margin-left: auto;
@@ -175,6 +173,17 @@ a:active {
 */
 
 }
+.fotobook {
+    display: block  
+    float: left;
+    border-radius: 10%;
+    height: 90px;
+    width: 10px;
+
+
+}
+
+
 
 img {
     transition: all 0.5s linear;
@@ -190,16 +199,6 @@ img {
      transform: scale(0.9);
       border-radius: 5%;
     	
-}
-
-.fotobook {
-    display: block  
-    float: left;
-    border-radius: 10%;
-    height: 90px;
-    width: 10px;
-
-
 }
 
 .separador1{
