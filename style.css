@@ -193,10 +193,11 @@ img {
 }
 
 .fotobook {
+    display: block  
     float: left;
     border-radius: 10%;
-    height: 80px;
-    width: 25px;
+    height: 90px;
+    width: 10px;
 
 
 }
