@@ -1,0 +1,27 @@
+name: “Gerson Julcarima Alvarez”
+navbar:
+  title: 
+  left:
+  right:
+    - text: Home 
+      icon: fa-home
+      href: index.html  
+    - text: Articles 
+      icon: fa-file-alt
+      href: articles.html
+    - text: Other Publications
+      icon: fa-book
+      href: others.html  
+    - text: Research
+      icon: fa-briefcase
+      href: research.html      
+output_dir: "."
+output:
+  html_document:
+    theme: lumen  # cosmo
+    highlight: textmate
+#    include:
+#      after_body: footer.html
+
+# https://fontawesome.com/icons?d=gallery
+# http://bl.ocks.org/hempro00/6ce58ddc46407185e148
