@@ -1,0 +1,210 @@
+---
+title: "Gerson Julcarima A." #espaço:\_\_\_\_\_ 
+output:
+  html_document:
+    fig_width: 1
+    
+---
+
+<style type="text/css">
+.nav.navbar-nav.navbar-right a {
+    color: #FB9039;
+}
+.navbar {
+  background-color:#1F3044;
+  border-color:#FB9039;
+}
+
+.navbar-nav>li:hover {
+    color: #333;
+    background-color:#FB9039;
+}
+
+body{ /* Normal  */
+      font-size: 15px;
+      background-color: white
+   
+  }
+
+
+h1.title {
+  font-size: 25px;
+  color: #1F3044;
+  font-weight: bold;
+}
+
+<!-- h1 { /* Header 1 */ -->
+<!--   font-size: 28px; -->
+<!--   color: #FB9039; -->
+<!-- } -->
+<!-- h2 { /* Header 2 */ -->
+<!--     font-size: 22px; -->
+<!--   color: DarkBlue; -->
+<!-- } -->
+<!-- h3 { /* Header 3 */ -->
+<!--   font-size: 18px; -->
+<!--   font-family: "Times New Roman", Times, serif; -->
+<!--   color: #FB9039; -->
+<!-- } -->
+<!-- code.r{ /* Code block */ -->
+<!--     font-size: 12px; -->
+<!-- } -->
+<!-- pre { /* Code block - determines code spacing between lines */ -->
+<!--     font-size: 14px; -->
+<!-- } -->
+
+</style>
+
+<style>
+
+.column {
+    float: left;
+    padding: 10px;
+
+}
+
+.left {
+  width: 30%;
+ /*padding-left: 5px;*/
+
+}
+
+
+.middle {
+  width: 70%;
+  /*padding-right: 10px;*/
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.separador1{
+    height:10px;
+    clear: both;
+}
+    
+.separador2{
+    width:3%;
+    height: 1px;
+    float:left;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 70%;*/ 
+}
+
+.column-left{
+  float: left;
+  width: 20 %;
+  text-align: center;
+}
+.column-right{
+  float: right;
+  width: 70%;
+  text-align: left;
+}
+.column-center2{
+  float: left;
+  width: 33%;
+  text-align: left;
+}
+
+.column-left2{
+  float: left;
+  width: 33%;
+  text-align: left;
+}
+
+.column-right2{
+  float: left;
+  width: 33%;
+  text-align: left;
+}
+.column{
+  float:left;
+  width: 100%;
+  text-align: left;
+} 
+.column-f1{
+  float: left;
+  width: 20%;
+  text-align: left;
+}
+.column-f2{
+  float: right;
+  width: 20%;
+  text-align: right;
+}
+
+</style>
+
+<link href="site_libs/academicons-1.9.1/css/academicons.min.css" rel="stylesheet" />
+
+<div class="column-left">
+
+
+![<a href= https://scholar.google.com/citations?hl=en&user=_U9-CyoAAAAJ > <i class="ai ai-google-scholar-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>
+<a href= https://orcid.org/0000-0002-6262-2230 > <i class="ai ai-orcid-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>
+<a href= https://www.researchgate.net/profile/Gerson_Julcarima > <i class="ai ai-researchgate-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a><a href= https://uleth.academia.edu/GersonJulcarima%C3%81lvarez> <i class="ai ai-academia-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>](imagens/foto2.jpg)
+
+
+<style>
+  img {
+    display: block;
+    border-radius: 10%;
+    height: 235px;
+    width: 200px; 
+  }
+  
+</style>
+
+
+<span style="color:#1F3044"> **CONTACT**  </br>
+<i class="fa fa-envelope" aria-hidden="true"></i> 
+g.julcarimaalvarez _at_ </i> uleth.ca </span>
+
+</div>
+
+<div class="column-right">
+
+<span style="color:#1F3044"> **M.A. in Political Science** </span> </br>
+<span style="color:#1F3044"> **Department of Political Science ** </span> </br> <span style="color:#1F3044"> **University of Lethbridge, Alberta, Canada** </span></p>
+
+I completed my undergraduate studies in sociology at the Universidad Nacional Mayor de San Marcos in Lima (Peru), and then I also pursued postgraduate studies at the Catholic University of Peru and the Methodist University of San Pablo (Brazil). 
+
+From 2013 to 2018, I was an adjunct professor at the University of Lima.
+
+Currently, I am also a research associate of the Instituto de Estudios Políticos Andinos.
+
+</span>
+
+<div class="separador1"> </div> 
+
+<div class="column-left2">
+
+<span style="color:#FB9039"> **Education** </span>
+
+<i class="fa fa-graduation-cap" aria-hidden="true"></i>   M.A. in Political Science </br> <small> Pontifical Catholic University of Peru, Peru </small>  </br>
+<i class="fa fa-graduation-cap" aria-hidden="true"></i>   B.A. in Sociology </br> <small> National University of San Marcos, Peru. </small> 
+</div>
+
+
+<div class="column-center2">
+<span style="color:#FB9039"> **Past positions** </span>
+
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> Adjunct Professor </br> <small> University of Lima, </br> Peru </small> </br>
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching Assistant </br> <small> University of Lethbridge, </br> Canada </small> </br>
+</div>
+
+<div class="column-right2">
+<span style="color:#FB9039"> **Interests** </span> </br> 
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> Semi-presidentialism in new democracies </br> 
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> Institutionalization of Parties and Party Systems </br> 
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> Religion and Politics </br> 
+</div>

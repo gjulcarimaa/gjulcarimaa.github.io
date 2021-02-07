@@ -1,0 +1,112 @@
+---
+title: "Research"
+output:
+  html_document:
+    toc_float: false
+    fig_width: 1
+---
+
+<style type="text/css">
+.nav.navbar-nav.navbar-right a {
+    color: #FB9039;
+}
+.navbar {
+  background-color:#1F3044;
+  border-color:#FB9039;
+}
+
+.navbar-nav>li:hover {
+    color: #333;
+    background-color:#FB9039;
+}
+
+body{ /* Normal  */
+      font-size: 15px;
+      background-color: white
+   
+}
+
+h1.title {
+  font-size: 25px;
+  color: #1F3044;
+  font-weight: bold;
+}
+
+h3 { /* Header 3 */
+  font-size: 20px;
+  color: #FB9039;
+}
+</style>
+
+<style>
+
+a:link {
+    color: #1F3044;
+    font-weight: bold;
+}
+a:visited {
+    color: #3e7287;
+}
+a:hover {
+    color: #3e7287;
+}
+
+.column-center{
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+
+.column-left{
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+
+.column-right{
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+
+.separador1{
+    height: 10px;
+    clear: both;
+    width: auto;
+}
+    
+.separador2{
+    width:3%;
+    height: 1px;
+    float:left;
+}
+
+img {
+     width: 20%;
+     border: 1px solid black;
+    border-radius: 3%;
+}
+
+</style>
+---- 
+
+### **Work in Progress**
+
+<p>
+La movilización electoral de las identidades étnicas en el Perú
+<p/>
+
+<p>
+The Ministers and the Ballot Boxes: Implications of the Evangelicals' Electoral  Mobilization in Peru
+<p/>
+
+<p>
+Paying Not to Vote: Pocketbook Considerations and the Shape of the Electorate (with G. Feierherd and G. Tuñón)
+<p/>
+
+<p>
+Electoral conflicts and local democracy in Peru (2010-2018) (with J.P. Milanese and J. Tarrillo)
+<p/>
+
+----
+
