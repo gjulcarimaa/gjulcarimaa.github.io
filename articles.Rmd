@@ -1,0 +1,117 @@
+---
+title: "Academic and Opinion Articles"
+output:
+  html_document:
+    fig_width: 1
+    toc_float: false    
+---
+<style type="text/css">
+.nav.navbar-nav.navbar-right a {
+    color: #FB9039;
+}
+.navbar {
+  background-color:#1F3044;
+  border-color:#FB9039;
+}
+
+.navbar-nav>li:hover {
+    color: #333;
+    background-color:#FB9039;
+}
+
+body{ /* Normal  */
+      font-size: 15px;
+      background-color: white
+   
+}
+
+h1.title {
+  font-size: 25px;
+  color: #1F3044;
+  font-weight: bold;
+}
+
+h3 { /* Header 3 */
+  font-size: 20px;
+  color: #FB9039;
+}
+</style>
+
+<style>
+a:link {
+    color: #1F3044;
+    font-weight: bold;
+}
+a:visited {
+    color: #3e7287;
+}
+a:hover {
+    color: #3e7287;
+}
+
+.column-center{
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+
+.column-left{
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+
+.column-right{
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+
+
+.separador1{
+    height: 10px;
+    clear: both;
+    width: auto;
+}
+    
+.separador2{
+    width:3%;
+    height: 1px;
+    float:left;
+}
+
+img {
+     width: 20%;
+     border: 1px solid black;
+    border-radius: 3%;
+}
+
+</style>
+
+----
+
+### **Academic Articles**
+<p>
+<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/Revista-Elecciones-18.pdf" target="_blank">Burn the Ballot Box for a Fair Election: Electoral Violence, Mineral Royalties, and National Oversight in Peruvian Municipal Elections</a>, with Anthony Pezzola, in <i>Elecciones</i>, vol. 17, Nro. 18, 2018, pp. 11-52.
+<p/>
+<a href="https://www.web.onpe.gob.pe/modEducacion/Publicaciones/Revista-Elecciones-16.pdf" target="_blank">Peruvian Democracy according to the Electoral Process 2016: Challenges and Limitations of Institutional Framework</a>, with Manuel Valenzuela in <i>Elecciones</i>, vol. 15, Nro. 16, 2016, pp. 53-76.
+<p/>
+<p>
+<a href="https://docs.google.com/uc?id=0B8lynDr7Pt4PWnFHSDJiXzVFeFU&export=download" target="_blank">A Historical Interpretive Sketch on the Formation of the Social Identity of Protestants in Peru</a>, in <i>Socialismo y Participación</i>, Nro.100, 2006, pp. 149-172.
+<p/>
+<p>
+The Occupation of the Landowners' Lands and the Pentecostals in Cerro de Pasco (1958-1962), in <i>Socialismo y Participación</i>, Nro.94, 2002.
+<p/>
+----
+
+
+### **Opinion Articles**
+
+<p>
+<a href="https://diariouno.pe/crisis-o-sinceramiento-de-la-representacion-politica-en-el-peru/"target="_blank">¿Crisis o sinceramiento de la representación política en el Perú?</a>, <i> Diario Uno</i>, January 16th, 2020.
+<p/>
+<p>
+<a href="https://presidential-power.net/?p=9608" target="_blank">The Brazilian presidential election of 2018: Does a cartel of parties produce mavericks?</a>, <i> Presidential Power</i>, May 22th, 2019.
+<p/>
+
+
