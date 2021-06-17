@@ -18,10 +18,13 @@ navbar:
 output_dir: "."
 output:
   html_document:
-    theme: lumen  # cosmo
+    theme: lumen  
     highlight: textmate
-#    include:
-#      after_body: footer.html
+    includes:
+       in_header: GA_file.html
+
 
 # https://fontawesome.com/icons?d=gallery
 # http://bl.ocks.org/hempro00/6ce58ddc46407185e148
+#    include:
+#      after_body: footer.html
