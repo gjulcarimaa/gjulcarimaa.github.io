@@ -149,9 +149,10 @@ h1.title {
 <div class="column-left">
 
 
-![<a href= https://scholar.google.com/citations?hl=en&user=_U9-CyoAAAAJ > <i class="ai ai-google-scholar-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>
+![<a href="cv.pdf"> <i class="ai ai-cv-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a> <a href= https://scholar.google.com/citations?hl=en&user=_U9-CyoAAAAJ > <i class="ai ai-google-scholar-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>
 <a href= https://orcid.org/0000-0002-6262-2230 > <i class="ai ai-orcid-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>
-<a href= https://www.researchgate.net/profile/Gerson_Julcarima > <i class="ai ai-researchgate-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a><a href= https://uleth.academia.edu/GersonJulcarima%C3%81lvarez> <i class="ai ai-academia-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>](imagens/foto2.jpg)
+<a href= https://www.researchgate.net/profile/Gerson_Julcarima > <i class="ai ai-researchgate-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a> <a href= https://uleth.academia.edu/GersonJulcarima%C3%81lvarez> <i class="ai ai-academia-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>](imagens/foto2.jpg)
+
 
 
 <style>
