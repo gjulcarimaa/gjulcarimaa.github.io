@@ -168,7 +168,7 @@ h1.title {
 
 <span style="color:#1F3044"> **CONTACT**  </br>
 <i class="fa fa-envelope" aria-hidden="true"></i> 
-g.julcarimaalvarez _at_ </i> uleth.ca </span>
+g.julcarima _at_ </i> icloud.com </span>
 
 </div>
 
