@@ -49,13 +49,11 @@ embed_url("https://www.youtube.com/watch?v=zZsSJEwRCcY") %>%
 
 #### Workshops {.panel-name}
 
-<li> **An Introduction to Electoral Studies**. Workshop on Electoral Systems and
-Political Parties - Department of Political Science at National University of San Marcos, Lima, Peru, 24 and 31 July, 2021. *(online)*. \medskip </li>
+<li>**An Introduction to Electoral Studies**. Workshop on Electoral Systems and
+Political Parties - Department of Political Science at National University of San Marcos, Lima, Peru, 24 and 31 July, 2021. *(online)*. </li> \medskip
 
-<li>**Workshop on Research Methodology in Electoral Studies** Electoral
-and of Governability School - National Court of Elections, Lima, Peru, 23 June - 5 July, *(online)*. \medskip </li>
-
-
+<li> **Workshop on Research Methodology in Electoral Studies** Electoral
+and of Governability School - National Court of Elections, Lima, Peru, 23 June - 5 July, *(online)*. </li> \medskip
 
 :::
 
