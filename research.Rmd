@@ -1,112 +1,139 @@
 ---
-title: "Research"
+title: "Publications"
 output:
-  html_document:
-    toc_float: false
-    fig_width: 1
+  distill::distill_article:
+    toc: false
 ---
-
-<style type="text/css">
-.nav.navbar-nav.navbar-right a {
-    color: #FB9039;
-}
-.navbar {
-  background-color:#1F3044;
-  border-color:#FB9039;
-}
-
-.navbar-nav>li:hover {
-    color: #333;
-    background-color:#FB9039;
-}
-
-body{ /* Normal  */
-      font-size: 15px;
-      background-color: white
-   
-}
-
-h1.title {
-  font-size: 25px;
-  color: #1F3044;
-  font-weight: bold;
-}
-
-h3 { /* Header 3 */
-  font-size: 20px;
-  color: #FB9039;
-}
-</style>
-
 <style>
-
-a:link {
-    color: #1F3044;
-    font-weight: bold;
-}
-a:visited {
-    color: #3e7287;
-}
-a:hover {
-    color: #3e7287;
-}
-
-.column-center{
-  float: left;
-  width: 30%;
-  text-align: left;
-}
-
-.column-left{
-  float: left;
-  width: 30%;
-  text-align: left;
-}
-
-.column-right{
-  float: left;
-  width: 30%;
-  text-align: left;
-}
-
 .separador1{
     height: 10px;
     clear: both;
     width: auto;
 }
-    
 .separador2{
     width:3%;
     height: 1px;
     float:left;
 }
-
 img {
      width: 20%;
      border: 1px solid black;
     border-radius: 3%;
 }
-
 </style>
----- 
+```{r panelset, layout='l-page', echo=FALSE}
+xaringanExtra::use_panelset()
+xaringanExtra::style_panelset_tabs(foreground = "honeydew", background = "#0F2E3D")
+```
+Research Interest: Indigenous politics, semi-presidentialism in new democracies, parties and party systems, and religion and politics.
 
-### **Work in Progress**
+::::: {.panelset}
 
-<p>
-La movilización electoral de las identidades étnicas en el Perú
-<p/>
+::: {.panel}
 
-<p>
-The Ministers and the Ballot Boxes: Implications of the Evangelicals' Electoral  Mobilization in Peru
-<p/>
+#### Articles {.panel-name}
 
-<p>
-Paying Not to Vote: Pocketbook Considerations and the Shape of the Electorate (with G. Feierherd and G. Tuñón)
-<p/>
+#### PEER-REVIEWED ARTICLES
 
-<p>
-Electoral conflicts and local democracy in Peru (2010-2018) (with J.P. Milanese and J. Tarrillo)
-<p/>
+<li> [*Does the monetary cost of abstaining increase turnout? Causal evidence from Peru*](https://www.sciencedirect.com/science/article/abs/pii/S026137942100130X). **Electoral Studies**, Volume 75, February 2022 [with German Feierherd and Gudalupe Tuñon] </li> \medskip
 
-----
+<li> [*Burn the Ballot Box for a Fair Election: Electoral Violence, Mineral Royalties, and National Oversight in Peruvian Municipal Elections*](http://www.onpe.gob.pe/modEducacion/Publicaciones/Revista-Elecciones-18.pdf). **Elecciones**, vol. 17, Nro. 18, 2018, pp. 11-52 [with Anthony Pezzola] </li> \medskip
 
+<li> [*Peruvian Democracy according to the Electoral Process 2016: Challenges and Limitations of Institutional Framework*](https://www.web.onpe.gob.pe/modEducacion/Publicaciones/Revista-Elecciones-16.pdf). **Elecciones**, vol. 15, Nro. 16, 2016, pp. 53-76. [with Manuel Valenzuela]  </li> \medskip
+
+
+
+##### OTHER ARTICLES
+
+
+
+:::
+
+::: {.panel}
+
+#### Book Chapters {.panel-name}
+
+<li> [*¿Afecta la “forma de gobierno” el funcionamiento de la democracia representativa? Algunas reflexiones a partir del caso peruano*](https://www.onpe.gob.pe/modEducacion/Publicaciones/ciudadania-politico.pdf). In Joan Lara Amat y León (editor), **La ciudadanía y lo político. Ciudadanía y crisis de la democracia liberal en un mundo en transformación**. Lima: ONPE, Fac. de Letras y Ciencias Humanas y Escuela de Ciencia Política de la Univ. Nac. Mayor de San Marcos, 2020, pp. 179-186.\medskip </li>
+
+
+<li> [*Multas electorales, ausentismo y participación electoral en el Perú (2002-2018*](https://www.onpe.gob.pe/modEducacion/Publicaciones/sanciones-multas-abstencionismo.pdf). In Manuel Valenzuela (coord.), **Sanciones, multas y abstencionismo electoral en el Perú. Tres estudios sobre participación electoral y voto obligatorio**. Lima: ONPE, 2019, pp. 137-174. [with Germán Feierherd y Guadalupe Tuñon] \medskip </li>
+
+<li> [*Elecciones y Evangélicos en el Perú (1979-2006)*](http://www.librosperuanos.com/libros/detalle/9770/Politicas-divinas-Religion-diversidad-y-politica-en-el-Peru-contemporaneo). In Fernando Armas y otros (editores). **Religión y poder en el Perú republicano**. Lima: Instituto Riva-
+Agüero–PUCP, 2008, pp. 387-410. [Republished in Sánchez, Marte y Manuel Valenzuela (editores). Democracia, Participación y representación Electoral en el Perú. Lima: ONPE, 2020, pp. 97-118] </li>
+
+:::
+
+
+::: {.panel}
+
+
+
+#### Ongoing Work {.panel-name}
+
+
+<li> *La movilización electoral de las identidades étnicas en el Perú*  \medskip </li>  
+
+<li> *The Ministers and the Ballot Boxes: Implications of the Evangelicals' Electoral  Mobilization in Peru* \medskip </li> 
+
+<li> *Electoral conflicts and local democracy in Peru (2010-2018) (with J.P. Milanese and J. Tarrillo)* \medskip  </li> 
+
+
+:::
+
+
+::: {.panel}
+
+#### Working Papers {.panel-name}
+
+<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/dt-actas.pdf" target="_blank">
+<img align="left" src="imagens/actas.jpg" / >
+</a>
+
+<div class="separador2"> </div> 
+
+<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/conflictos_book.pdf" target="_blank"> <img align="left" src="imagens/conflictos.jpg" / >
+</a>
+
+<div class="separador2"> </div> 
+
+<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/L-0081.pdf" target="_blank">
+<img align="left" src="imagens/conflictos2.jpg" / >
+</a>
+
+<div class="separador2"> </div> 
+
+<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/L-0058.pdf" target="_blank"> <img align="left" src="imagens/competencia.jpg" / >
+</a>
+<br>
+
+<div class="separador1"> </div> 
+
+<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/DT-27Miembros_Omisos.pdf" target="_blank"> <img align="left" src="imagens/miembros.jpg" / >
+</a>
+
+
+<div class="separador2"> </div> 
+
+<a href="https://www.iidh.ed.cr/multic/UserFiles/Biblioteca/CAPEL/3_2011/27d471f8-848e-4708-a58f-9476d9da982a.pdf" target="_blank"> <img align="left" src="imagens/estructura.jpg" / >
+</a>
+
+<div class="separador2"> </div> 
+
+<a href="https://www.iidh.ed.cr/multic/UserFiles/Biblioteca/CAPEL/11_2012/bb0775ec-0982-407c-aa81-d60f5b3bbfa9.pdf" target="_blank">
+<img align="left" src="imagens/Cultura.jpg" / >
+</a>
+
+<div class="separador2"> </div> 
+
+<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/DT-26Percepciones_sobre_la_gestion.pdf" target="_blank"> <img align="left" src="imagens/Percepciones.jpg" / >
+</a>
+
+<div class="separador1"> </div> 
+
+<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/reporte_01.pdf" target="_blank">
+<img align="left" src="imagens/NT.GIF" / >
+</a>
+
+:::
+
+:::::

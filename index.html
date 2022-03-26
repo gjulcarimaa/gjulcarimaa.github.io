@@ -1,522 +1,1239 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<html>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style type="text/css">body {font-family: 'Roboto Mono', serif;}</style>
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <style>
+      @media screen and (min-width: 768px) {
+        .container {
+          width: 768px;
+        }
+      }
 
-
-
-
-<title>Gerson Julcarima A.</title>
-
-<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140818119-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-140818119-1');
-</script>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
+      body {
+        background-color: #f5e9dd;
+      }
     </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
+    <title>Gerson Julcarima A.</title>
 
-
-
-
-
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"></a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="index.html">
-    <span class="fa fa-home"></span>
-     
-    Home
-  </a>
-</li>
-<li>
-  <a href="articles.html">
-    <span class="fa fa-file-alt"></span>
-     
-    Articles
-  </a>
-</li>
-<li>
-  <a href="others.html">
-    <span class="fa fa-book"></span>
-     
-    Other Publications
-  </a>
-</li>
-<li>
-  <a href="research.html">
-    <span class="fa fa-briefcase"></span>
-     
-    Research
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div id="header">
-
-
-
-<h1 class="title toc-ignore">Gerson Julcarima A.</h1>
-
-</div>
-
-
-<style type="text/css">
-.nav.navbar-nav.navbar-right a {
-    color: #FB9039;
-}
-.navbar {
-  background-color:#1F3044;
-  border-color:#FB9039;
-}
-
-.navbar-nav>li:hover {
-    color: #333;
-    background-color:#FB9039;
-}
-
-body{ /* Normal  */
-      font-size: 15px;
-      background-color: white
-   
-  }
-
-
-h1.title {
-  font-size: 25px;
-  color: #1F3044;
-  font-weight: bold;
-}
-
-<!-- h1 { /* Header 1 */ -->
-<!--   font-size: 28px; -->
-<!--   color: #FB9039; -->
-<!-- } -->
-<!-- h2 { /* Header 2 */ -->
-<!--     font-size: 22px; -->
-<!--   color: DarkBlue; -->
-<!-- } -->
-<!-- h3 { /* Header 3 */ -->
-<!--   font-size: 18px; -->
-<!--   font-family: "Times New Roman", Times, serif; -->
-<!--   color: #FB9039; -->
-<!-- } -->
-<!-- code.r{ /* Code block */ -->
-<!--     font-size: 12px; -->
-<!-- } -->
-<!-- pre { /* Code block - determines code spacing between lines */ -->
-<!--     font-size: 14px; -->
-<!-- } -->
-
-</style>
-<style>
-
-.column {
-    float: left;
-    padding: 10px;
-
-}
-
-.left {
-  width: 30%;
- /*padding-left: 5px;*/
-
-}
-
-
-.middle {
-  width: 70%;
-  /*padding-right: 10px;*/
-
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.separador1{
-    height:10px;
-    clear: both;
-}
     
-.separador2{
-    width:3%;
-    height: 1px;
-    float:left;
-}
+          <!--radix_placeholder_navigation_in_header-->
+          <meta name="distill:offset" content=""/>
 
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    /*width: 70%;*/ 
-}
+          <script type="application/javascript">
 
-.column-left{
-  float: left;
-  width: 20 %;
-  text-align: center;
-}
-.column-right{
-  float: right;
-  width: 70%;
-  text-align: left;
-}
-.column-center2{
-  float: left;
-  width: 33%;
-  text-align: left;
-}
+            window.headroom_prevent_pin = false;
 
-.column-left2{
-  float: left;
-  width: 33%;
-  text-align: left;
-}
+            window.document.addEventListener("DOMContentLoaded", function (event) {
 
-.column-right2{
-  float: left;
-  width: 33%;
-  text-align: left;
-}
-.column{
-  float:left;
-  width: 100%;
-  text-align: left;
-} 
-.column-f1{
-  float: left;
-  width: 20%;
-  text-align: left;
-}
-.column-f2{
-  float: right;
-  width: 20%;
-  text-align: right;
-}
+              // initialize headroom for banner
+              var header = $('header').get(0);
+              var headerHeight = header.offsetHeight;
+              var headroom = new Headroom(header, {
+                tolerance: 5,
+                onPin : function() {
+                  if (window.headroom_prevent_pin) {
+                    window.headroom_prevent_pin = false;
+                    headroom.unpin();
+                  }
+                }
+              });
+              headroom.init();
+              if(window.location.hash)
+                headroom.unpin();
+              $(header).addClass('headroom--transition');
 
-</style>
-<p><link href="site_libs/academicons-1.9.1/css/academicons.min.css" rel="stylesheet" /></p>
-<div class="column-left">
-<div class="figure">
-<img src="imagens/foto2.jpg" alt="" />
-<p class="caption"><a href="cv.pdf"> <i class="ai ai-cv-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a> <a href= https://scholar.google.com/citations?hl=en&user=_U9-CyoAAAAJ > <i class="ai ai-google-scholar-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a> <a href= https://orcid.org/0000-0002-6262-2230 > <i class="ai ai-orcid-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a> <a href= https://www.researchgate.net/profile/Gerson_Julcarima > <i class="ai ai-researchgate-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a> <a href= https://uleth.academia.edu/GersonJulcarima%C3%81lvarez> <i class="ai ai-academia-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a></p>
-</div>
-<style>
-  img {
-    display: block;
-    border-radius: 10%;
-    height: 235px;
-    width: 200px; 
-  }
-  
-</style>
-<p><span style="color:#1F3044"> <strong>CONTACT</strong> </br> <i class="fa fa-envelope" aria-hidden="true"></i> g.julcarima <em>at</em> </i> icloud.com </span></p>
-</div>
-<div class="column-right">
+              // offset scroll location for banner on hash change
+              // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+              window.addEventListener("hashchange", function(event) {
+                window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+              });
 
-<span style="color:#1F3044"> <strong>M.A. in Political Science</strong> </span> </br> <span style="color:#1F3044"> <strong>Department of Political Science </strong> </span> </br> <span style="color:#1F3044"> <strong>University of Lethbridge, Alberta, Canada</strong> </span>
-</p>
-<p>I completed my undergraduate studies in sociology at the Universidad Nacional Mayor de San Marcos in Lima (Peru), and then I also pursued postgraduate studies at the Catholic University of Peru and the Methodist University of San Pablo (Brazil).</p>
-<p>From 2013 to 2018, I was an adjunct professor at the University of Lima.</p>
-<p>Currently, I am also a research associate of the Instituto de Estudios Políticos Andinos.</p>
-<p></span></p>
-<div class="separador1">
+              // responsive menu
+              $('.distill-site-header').each(function(i, val) {
+                var topnav = $(this);
+                var toggle = topnav.find('.nav-toggle');
+                toggle.on('click', function() {
+                  topnav.toggleClass('responsive');
+                });
+              });
 
-</div>
-<div class="column-left2">
-<p><span style="color:#FB9039"> <strong>Education</strong> </span></p>
-<p><i class="fa fa-graduation-cap" aria-hidden="true"></i> M.A. in Political Science </br> <small> Pontifical Catholic University of Peru, Peru </small> </br> <i class="fa fa-graduation-cap" aria-hidden="true"></i> B.A. in Sociology </br> <small> National University of San Marcos, Peru. </small></p>
-</div>
-<div class="column-center2">
-<p><span style="color:#FB9039"> <strong>Past positions</strong> </span></p>
-<p><i class="fa fa-graduation-cap" aria-hidden="true"></i> Adjunct Professor </br> <small> University of Lima, </br> Peru </small> </br> <i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching Assistant </br> <small> University of Lethbridge, </br> Canada </small> </br></p>
-</div>
-<div class="column-right2">
-<p><span style="color:#FB9039"> <strong>Interests</strong> </span> </br> <i class="fa fa-graduation-cap" aria-hidden="true"></i> Semi-presidentialism in new democracies </br> <i class="fa fa-graduation-cap" aria-hidden="true"></i> Institutionalization of Parties and Party Systems </br> <i class="fa fa-graduation-cap" aria-hidden="true"></i> Religion and Politics </br></p>
-</div>
+              // nav dropdowns
+              $('.nav-dropbtn').click(function(e) {
+                $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+                $(this).parent().siblings('.nav-dropdown')
+                   .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+              });
+              $("body").click(function(e){
+                $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+              });
+              $(".nav-dropdown").click(function(e){
+                e.stopPropagation();
+              });
+            });
+          </script>
+
+          <style type="text/css">
+
+          /* Theme (user-documented overrideables for nav appearance) */
+
+          .distill-site-nav {
+            color: rgba(255, 255, 255, 0.8);
+            background-color: #0F2E3D;
+            font-size: 15px;
+            font-weight: 300;
+          }
+
+          .distill-site-nav a {
+            color: inherit;
+            text-decoration: none;
+          }
+
+          .distill-site-nav a:hover {
+            color: white;
+          }
+
+          @media print {
+            .distill-site-nav {
+              display: none;
+            }
+          }
+
+          .distill-site-header {
+
+          }
+
+          .distill-site-footer {
+
+          }
 
 
+          /* Site Header */
+
+          .distill-site-header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 3;
+          }
+
+          .distill-site-header .nav-left {
+            display: inline-block;
+            margin-left: 8px;
+          }
+
+          @media screen and (max-width: 768px) {
+            .distill-site-header .nav-left {
+              margin-left: 0;
+            }
+          }
 
 
-</div>
+          .distill-site-header .nav-right {
+            float: right;
+            margin-right: 8px;
+          }
 
-<script>
+          .distill-site-header a,
+          .distill-site-header .title {
+            display: inline-block;
+            text-align: center;
+            padding: 14px 10px 14px 10px;
+          }
 
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
+          .distill-site-header .title {
+            font-size: 18px;
+            min-width: 150px;
+          }
+
+          .distill-site-header .logo {
+            padding: 0;
+          }
+
+          .distill-site-header .logo img {
+            display: none;
+            max-height: 20px;
+            width: auto;
+            margin-bottom: -4px;
+          }
+
+          .distill-site-header .nav-image img {
+            max-height: 18px;
+            width: auto;
+            display: inline-block;
+            margin-bottom: -3px;
+          }
 
 
-</script>
 
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
+          @media screen and (min-width: 1000px) {
+            .distill-site-header .logo img {
+              display: inline-block;
+            }
+            .distill-site-header .nav-left {
+              margin-left: 20px;
+            }
+            .distill-site-header .nav-right {
+              margin-right: 20px;
+            }
+            .distill-site-header .title {
+              padding-left: 12px;
+            }
+          }
 
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
+          .distill-site-header .nav-toggle {
+            display: none;
+          }
 
-</body>
+          .nav-dropdown {
+            display: inline-block;
+            position: relative;
+          }
+
+          .nav-dropdown .nav-dropbtn {
+            border: none;
+            outline: none;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 16px 10px;
+            background-color: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            margin: 0;
+            margin-top: 1px;
+            z-index: 2;
+          }
+
+          .nav-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            border: 1px solid rgba(0,0,0,0.15);
+            border-radius: 4px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            margin-top: 2px;
+            white-space: nowrap;
+            padding-top: 4px;
+            padding-bottom: 4px;
+          }
+
+          .nav-dropdown-content hr {
+            margin-top: 4px;
+            margin-bottom: 4px;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          }
+
+          .nav-dropdown-active {
+            display: block;
+          }
+
+          .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+            color: black;
+            padding: 6px 24px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+          }
+
+          .nav-dropdown-content .nav-dropdown-header {
+            display: block;
+            padding: 5px 24px;
+            padding-bottom: 0;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #999999;
+            white-space: nowrap;
+          }
+
+          .nav-dropdown:hover .nav-dropbtn {
+            color: white;
+          }
+
+          .nav-dropdown-content a:hover {
+            background-color: #ddd;
+            color: black;
+          }
+
+          .nav-right .nav-dropdown-content {
+            margin-left: -45%;
+            right: 0;
+          }
+
+          @media screen and (max-width: 768px) {
+            .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+            .distill-site-header a.nav-toggle {
+              float: right;
+              display: block;
+            }
+            .distill-site-header .title {
+              margin-left: 0;
+            }
+            .distill-site-header .nav-right {
+              margin-right: 0;
+            }
+            .distill-site-header {
+              overflow: hidden;
+            }
+            .nav-right .nav-dropdown-content {
+              margin-left: 0;
+            }
+          }
+
+
+          @media screen and (max-width: 768px) {
+            .distill-site-header.responsive {position: relative; min-height: 500px; }
+            .distill-site-header.responsive a.nav-toggle {
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+            .distill-site-header.responsive a,
+            .distill-site-header.responsive .nav-dropdown {
+              display: block;
+              text-align: left;
+            }
+            .distill-site-header.responsive .nav-left,
+            .distill-site-header.responsive .nav-right {
+              width: 100%;
+            }
+            .distill-site-header.responsive .nav-dropdown {float: none;}
+            .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+            .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+              display: block;
+              width: 100%;
+              text-align: left;
+            }
+          }
+
+          /* Site Footer */
+
+          .distill-site-footer {
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            z-index: 3;
+            margin-top: 30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            text-align: center;
+          }
+
+          /* Headroom */
+
+          d-title {
+            padding-top: 6rem;
+          }
+
+          @media print {
+            d-title {
+              padding-top: 4rem;
+            }
+          }
+
+          .headroom {
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+          }
+
+          .headroom--transition {
+            transition: all .4s ease-in-out;
+          }
+
+          .headroom--unpinned {
+            top: -100px;
+          }
+
+          .headroom--pinned {
+            top: 0;
+          }
+
+          /* adjust viewport for navbar height */
+          /* helps vertically center bootstrap (non-distill) content */
+          .min-vh-100 {
+            min-height: calc(100vh - 100px) !important;
+          }
+
+          </style>
+
+          <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+          <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+          <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+          <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+          <!--/radix_placeholder_navigation_in_header-->
+          <!--radix_placeholder_site_in_header-->
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+          <!--/radix_placeholder_site_in_header-->
+          
+          <style type="text/css">
+          body {
+            padding-top: 60px;
+          }
+          </style>
+          <style type="text/css">
+          /* base variables */
+
+          /* Edit the CSS properties in this file to create a custom
+             Distill theme. Only edit values in the right column
+             for each row; values shown are the CSS defaults.
+             To return any property to the default,
+             you may set its value to: unset
+             All rows must end with a semi-colon.                      */
+
+          /* Optional: embed custom fonts here with `@import`          */
+          /* This must remain at the top of this file.                 */
+
+
+
+          html {
+            /*-- Main font sizes --*/
+            --title-size:      50px;
+            --body-size:       1.06rem;
+            --code-size:       14px;
+            --aside-size:      12px;
+            --fig-cap-size:    13px;
+            /*-- Main font colors --*/
+            --title-color:     #000000;
+            --header-color:    rgba(0, 0, 0, 0.8);
+            --body-color:      rgba(0, 0, 0, 0.8);
+            --aside-color:     rgba(0, 0, 0, 0.6);
+            --fig-cap-color:   rgba(0, 0, 0, 0.6);
+            /*-- Specify custom fonts ~~~ must be imported above   --*/
+            --heading-font:    sans-serif;
+            --mono-font:       monospace;
+            --body-font:       sans-serif;
+            --navbar-font:     sans-serif;  /* websites + blogs only */
+          }
+
+          /*-- ARTICLE METADATA --*/
+          d-byline {
+            --heading-size:    0.6rem;
+            --heading-color:   rgba(0, 0, 0, 0.5);
+            --body-size:       0.8rem;
+            --body-color:      rgba(0, 0, 0, 0.8);
+          }
+
+          /*-- ARTICLE TABLE OF CONTENTS --*/
+          .d-contents {
+            --heading-size:    18px;
+            --contents-size:   13px;
+          }
+
+          /*-- ARTICLE APPENDIX --*/
+          d-appendix {
+            --heading-size:    15px;
+            --heading-color:   rgba(0, 0, 0, 0.65);
+            --text-size:       0.8em;
+            --text-color:      rgba(0, 0, 0, 0.5);
+          }
+
+          /*-- WEBSITE HEADER + FOOTER --*/
+          /* These properties only apply to Distill sites and blogs  */
+
+          .distill-site-header {
+            --title-size:       18px;
+            --text-color:       rgba(255, 255, 255, 0.8);
+            --text-size:        15px;
+            --hover-color:      white;
+            --bkgd-color:       #0F2E3D;
+          }
+
+          .distill-site-footer {
+            --text-color:       rgba(255, 255, 255, 0.8);
+            --text-size:        15px;
+            --hover-color:      white;
+            --bkgd-color:       #0F2E3D;
+          }
+
+          /*-- Additional custom styles --*/
+          /* Add any additional CSS rules below                      */
+          </style>
+          <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=IBM+Plex+Mono&family=IBM+Plex+Sans&family=IBM+Plex+Serif:ital,wght@1,600&family=Lato&display=swap');
+
+          /* Nord */
+          /*
+           * Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+           * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+           *
+           * Project:    Nord
+           * Version:    0.2.0
+           * Repository: https://github.com/arcticicestudio/nord
+           * License:    MIT
+           * References:
+           *   https://www.w3.org/TR/css-variables
+           *   https://www.w3.org/TR/selectors/#root-pseudo
+           *   https://drafts.csswg.org/css-variables
+           *   https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+           *   http://warpspire.com/kss
+           *   https://github.com/kss-node/kss-node
+           */
+
+
+          :root {
+            /*
+            Base component color of "Polar Night".
+            Used for texts, backgrounds, carets and structuring characters like curly- and square brackets.
+            */
+            --nord0: #2e3440;
+            /*
+            Lighter shade color of the base component color.
+            Used as a lighter background color for UI elements like status bars.
+            */
+            --nord1: #3b4252;
+            /*
+            Lighter shade color of the base component color.
+            Used as line highlighting in the editor.
+            In the UI scope it may be used as selection- and highlight color.
+            */
+            --nord2: #434c5e;
+            /*
+            Lighter shade color of the base component color.
+            Used for comments, invisibles, indent- and wrap guide marker.
+            In the UI scope used as pseudoclass color for disabled elements.
+            */
+            --nord3: #4c566a;
+            /*
+            Base component color of "Snow Storm".
+            Main color for text, variables, constants and attributes.
+            In the UI scope used as semi-light background depending on the theme shading design.
+            */
+            --nord4: #d8dee9;
+            /*
+            Lighter shade color of the base component color.
+            Used as a lighter background color for UI elements like status bars.
+            Used as semi-light background depending on the theme shading design.
+            */
+            --nord5: #e5e9f0;
+            /*
+            Lighter shade color of the base component color.
+            Used for punctuations, carets and structuring characters like curly- and square brackets.
+            In the UI scope used as background, selection- and highlight color depending on the theme shading design.
+            */
+            --nord6: #eceff4;
+            /*
+            Bluish core color.
+            Used for classes, types and documentation tags.
+            */
+            --nord7: #8fbcbb;
+            /*
+            Bluish core accent color.
+            Represents the accent color of the color palette.
+            Main color for primary UI elements and methods/functions.
+            Can be used for
+              - Markup quotes
+              - Markup link URLs
+            */
+            --nord8: #88c0d0;
+            /*
+            Bluish core color.
+            Used for language-specific syntactic/reserved support characters and keywords, operators, tags, units and
+            punctuations like (semi)colons,commas and braces.
+            */
+            --nord9: #81a1c1;
+            /*
+            Bluish core color.
+            Used for markup doctypes, import/include/require statements, pre-processor statements and at-rules (`@`).
+            */
+            --nord10: #5e81ac;
+            /*
+            Colorful component color.
+            Used for errors, git/diff deletion and linter marker.
+            */
+            --nord11: #bf616a;
+            /*
+            Colorful component color.
+            Used for annotations.
+            */
+            --nord12: #d08770;
+            /*
+            Colorful component color.
+            Used for escape characters, regular expressions and markup entities.
+            In the UI scope used for warnings and git/diff renamings.
+            */
+            --nord13: #ebcb8b;
+            /*
+            Colorful component color.
+            Main color for strings and attribute values.
+            In the UI scope used for git/diff additions and success visualizations.
+            */
+            --nord14: #a3be8c;
+            /*
+            Colorful component color.
+            Used for numbers.
+            */
+            --nord15: #b48ead;
+          }
+
+
+          /* Theme */
+          :root {
+            --primary: #000000; /*#388e00; */
+          }
+
+          html {
+            /*-- Main font sizes --*/
+            --title-size:      50px;
+            --body-size:       1.06rem;
+            --code-size:       14px;
+            --aside-size:      12px;
+            --fig-cap-size:    13px;
+            /*-- Main font colors --*/
+            --title-color:     #000000;
+            --header-color:    rgba(0, 0, 0, 0.8);
+            --body-color:      var(--nord0);
+            --aside-color:     rgba(0, 0, 0, 0.6);
+            --fig-cap-color:   rgba(0, 0, 0, 0.6);
+            /*-- Specify custom fonts ~~~ must be imported above   --*/
+            --heading-font:    'IBM Plex Sans', sans-serif;
+            --mono-font:       'IBM Plex Mono', monospace;
+            --body-font:       'IBM Plex Sans', sans-serif;
+            --navbar-font:     'IBM Plex Sans', serif; /* websites + blogs only */
+          }
+
+          /*-- Main section --*/
+          d-article,
+          d-appendix,
+          body {
+            background-color: var(--nord5); /* var(--nord5); */
+            color: var(--nord0);
+          }
+
+          /*-- ARTICLE METADATA --*/
+          d-byline {
+            --heading-size:    0.6rem;
+            --heading-color:   rgba(0, 0, 0, 0.5);
+            --body-size:       0.8rem;
+            --body-color:      rgba(0, 0, 0, 0.8);
+          }
+
+          /*-- ARTICLE TABLE OF CONTENTS --*/
+          .d-contents {
+            --heading-size:    18px;
+            --contents-size:   13px;
+          }
+
+          /*-- ARTICLE APPENDIX --*/
+          d-appendix {
+            --heading-size:    15px;
+            --heading-color:   rgba(0, 0, 0, 0.65);
+            --text-size:       0.8em;
+            --text-color:      rgba(0, 0, 0, 0.5);
+          }
+
+          /*-- WEBSITE HEADER + FOOTER --*/
+          /* These properties only apply to Distill sites and blogs  */
+
+          .distill-site-header {
+            --title-size:       18px;
+            --text-color:       rgba(0, 0, 0, 0.8);
+            --text-size:        17px;
+            --hover-color:      var(--node03);
+            --bkgd-color:       rgba(210, 210, 210, 0.6); 
+          }
+
+          .distill-site-footer {
+            --text-color:       rgba(0, 0, 0, 0.6);
+            --text-size:        15px;
+            --hover-color:      var(--primary);
+            --bkgd-color:       rgba(210, 210, 210, 0.8);
+          }
+
+
+
+          /*-- Additional custom styles --*/
+          /* Add any additional CSS rules below                      */
+
+
+
+          /* Code Folding by Thomas Mock https://themockup.blog/about.html */
+          details {
+            background-color: hsla(60, 7%, 80%, 0.2);
+            cursor: pointer;
+            color: #2d2d2d;
+            margin-bottom:1vh;
+            padding: 1em;
+            border: none;
+            text-align: left;
+            outline: none;
+          }
+
+
+          .active, details:hover {
+            transition: max-height 0.2s ease-out;
+          }
+
+          details {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            border-radius: 4px;
+          }
+
+          details.active {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+
+          summary::-webkit-details-marker {
+            display: none
+          }
+
+          summary::after {
+            float: right;
+            font-family: "Font Awesome 5 Free";
+            content: "\f0fe";
+          }
+
+          details[open] summary::after {
+            float: right;
+            font-family: "Font Awesome 5 Free";
+            content: "\f146";
+          }
+
+          details h4 {
+            margin: 0;
+            color: #2d2d2d !important;
+            line-height: inherit;
+          }
+
+
+          .btn-outline-dark {
+              background-color: var(--nord4); /* #aaaaaa; */
+              color: var(--nord0);/*#fff; */
+              border: 5px;
+          }
+
+          .btn-outline-dark:hover {
+              background-color: #dddddd;
+              color: #000000;
+          }
+
+
+          /* Scrollbar */
+          /* Works on Firefox */
+          * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary);  var(--nord1);
+          }
+
+          /* Works on Chrome, Edge, and Safari */
+          *::-webkit-scrollbar {
+            width: 12px;
+          }
+
+
+          *::-webkit-scrollbar-thumb {
+            background-color: var(--nord1);
+            border-radius: 12px;
+            border: 1px solid var(--nord5);
+          }
+
+          /* Listing Pages */
+          .posts-list .post-preview {
+            max-width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          /* Darkmode */
+          .darkmode {
+            --title-color:     var(--nord5);
+            --header-color:    var(--nord5);
+            --body-color:      var(--nord5);
+            --aside-color:     var(--nord5);
+            --fig-cap-color:   var(--nord5);
+            background-color: var(--nord0);
+            color: var(--nord5);
+          }
+
+          .darkmode d-article,
+          .darkmode d-appendix,
+          .darkmode body {
+            background-color: var(--nord0);
+            color: var(--nord5);
+          }
+
+          .darkmode d-title {
+            color: var(--nord5);
+          }
+
+          .darkmode d-article blockquote {
+            color: var(--nord5);
+          }
+
+          .darkmode d-byline {
+            --heading-color:  var(--nord5);
+            --body-color:     var(--nord5);
+          }
+
+          .darkmode d-appendix {
+            border-color: var(--nord4);
+            --heading-color:   var(--nord5);
+            --text-color:      var(--nord5);
+          }
+
+          .darkmode d-appendix a {
+            color: var(--nord5);
+          }
+
+          .darkmode .distill-site-header {
+            --text-color: var(--nord5);
+            --bkgd-color: var(--nord1);
+          }
+
+          .darkmode .distill-site-footer {
+            --text-color: var(--nord5);
+            --bkgd-color: var(--nord1);
+          }
+
+
+          .darkmode d-article div.sourceCode,
+          .darkmode code {
+            background-color: var(--nord1);
+          }
+
+          .darkmode d-article pre {
+            color: var(--nord4);
+          }
+
+          .darkmode code span {
+            color: var(--nord6);
+          }
+
+          .darkmode a {
+            border-color: var(--nord5);
+          }
+
+          .darkmode .posts-list .post-preview {
+            border-color: var(--nord5);
+          }
+
+          .darkmode a:hover {
+            border-color: var(--primary);
+          }
+
+          .darkmode .categories li > * {
+            color: var(--nord5);
+          }
+
+          .darkmode .posts-list .dt-tags .dt-tag,
+          .darkmode .dt-tags .dt-tag {
+            color: var(--nord5);
+            border-color: var(--nord5);
+          }
+
+          .darkmode d-article .sourceCode {
+            background-color: var(--nord1);
+          }
+
+          .darkmode details {
+            color: var(--nord4);
+          }
+
+          .darkmode .algolia-autocomplete,
+          .darkmode .algolia-autocomplete .aa-input,
+          .darkmode .algolia-autocomplete .aa-dropdown-menu,
+          .darkmode .algolia-autocomplete div .search-item,
+          .darkmode .algolia-autocomplete .aa-hint {
+            background-color: var(--nord1);
+            color: var(--nord5);
+          }
+
+          .darkmode .social_footer {
+            color: var(--nord5);
+          }
+
+          .darkmode #fs-frm input:focus,
+          .darkmode #fs-frm [type="submit"]:hover,
+          .darkmode #fs-frm [type="submit"] input:focus,
+          .darkmode #fs-frm select:focus,
+          .darkmode #fs-frm textarea:focus {
+            background-color: var(--nord2);
+          }
+
+          .darkmode #fs-frm input,
+          .darkmode #fs-frm select,
+          .darkmode #fs-frm textarea,
+          .darkmode #fs-frm #card-element {
+            border: 1px solid var(--nord1);
+            background-color: var(--nord1);
+          }
+
+
+          .darkmode div.datatables,
+          .darkmode table.dataTable.stripe tbody tr.odd, .darkmode table.dataTable.display tbody tr.odd,
+          .darkmode table.dataTable tbody tr,
+          .darkmode input,
+          .darkmode .dataTables_wrapper .dataTables_length,
+          .darkmode .dataTables_wrapper .dataTables_filter,
+          .darkmode .dataTables_wrapper .dataTables_info,
+          .darkmode .dataTables_wrapper .dataTables_processing,
+          .darkmode .dataTables_wrapper .dataTables_paginate {
+            color: var(--nord4);
+            background-color: var(--nord1);
+          }</style>
+          <style type="text/css">
+          /* base style */
+
+          /* FONT FAMILIES */
+
+          :root {
+            --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+            --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+          }
+
+          body,
+          .posts-list .post-preview p,
+          .posts-list .description p {
+            font-family: var(--body-font), var(--body-default);
+          }
+
+          h1, h2, h3, h4, h5, h6,
+          .posts-list .post-preview h2,
+          .posts-list .description h2 {
+            font-family: var(--heading-font), var(--heading-default);
+          }
+
+          d-article div.sourceCode code,
+          d-article pre code {
+            font-family: var(--mono-font), var(--mono-default);
+          }
+
+
+          /*-- TITLE --*/
+          d-title h1,
+          .posts-list > h1 {
+            color: var(--title-color, black);
+          }
+
+          d-title h1 {
+            font-size: var(--title-size, 50px);
+          }
+
+          /*-- HEADERS --*/
+          d-article h1,
+          d-article h2,
+          d-article h3,
+          d-article h4,
+          d-article h5,
+          d-article h6 {
+            color: var(--header-color, rgba(0, 0, 0, 0.8));
+          }
+
+          /*-- BODY --*/
+          d-article > p,  /* only text inside of <p> tags */
+          d-article > ul, /* lists */
+          d-article > ol {
+            color: var(--body-color, rgba(0, 0, 0, 0.8));
+            font-size: var(--body-size, 1.06rem);
+          }
+
+
+          /*-- CODE --*/
+          d-article div.sourceCode code,
+          d-article pre code {
+            font-size: var(--code-size, 14px);
+          }
+
+          /*-- ASIDE --*/
+          d-article aside {
+            font-size: var(--aside-size, 12px);
+            color: var(--aside-color, rgba(0, 0, 0, 0.6));
+          }
+
+          /*-- FIGURE CAPTIONS --*/
+          figure .caption,
+          figure figcaption,
+          .figure .caption {
+            font-size: var(--fig-cap-size, 13px);
+            color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+          }
+
+          /*-- METADATA --*/
+          d-byline h3 {
+            font-size: var(--heading-size, 0.6rem);
+            color: var(--heading-color, rgba(0, 0, 0, 0.5));
+          }
+
+          d-byline {
+            font-size: var(--body-size, 0.8rem);
+            color: var(--body-color, rgba(0, 0, 0, 0.8));
+          }
+
+          d-byline a,
+          d-article d-byline a {
+            color: var(--body-color, rgba(0, 0, 0, 0.8));
+          }
+
+          /*-- TABLE OF CONTENTS --*/
+          .d-contents nav h3 {
+            font-size: var(--heading-size, 18px);
+          }
+
+          .d-contents nav a {
+            font-size: var(--contents-size, 13px);
+          }
+
+          /*-- APPENDIX --*/
+          d-appendix h3 {
+            font-size: var(--heading-size, 15px);
+            color: var(--heading-color, rgba(0, 0, 0, 0.65));
+          }
+
+          d-appendix {
+            font-size: var(--text-size, 0.8em);
+            color: var(--text-color, rgba(0, 0, 0, 0.5));
+          }
+
+          d-appendix d-footnote-list a.footnote-backlink {
+            color: var(--text-color, rgba(0, 0, 0, 0.5));
+          }
+
+          /*-- WEBSITE HEADER + FOOTER --*/
+          .distill-site-header .title {
+            font-size: var(--title-size, 18px);
+            font-family: var(--navbar-font), var(--heading-default);
+          }
+
+          .distill-site-header a,
+          .nav-dropdown .nav-dropbtn {
+            font-family: var(--navbar-font), var(--heading-default);
+          }
+
+          .nav-dropdown .nav-dropbtn {
+            color: var(--text-color, rgba(255, 255, 255, 0.8));
+            font-size: var(--text-size, 15px);
+          }
+
+          .distill-site-header a:hover,
+          .nav-dropdown:hover .nav-dropbtn {
+            color: var(--hover-color, white);
+          }
+
+          .distill-site-header {
+            font-size: var(--text-size, 15px);
+            color: var(--text-color, rgba(255, 255, 255, 0.8));
+            background-color: var(--bkgd-color, #0F2E3D);
+          }
+
+          .distill-site-footer {
+            font-size: var(--text-size, 15px);
+            color: var(--text-color, rgba(255, 255, 255, 0.8));
+            background-color: var(--bkgd-color, #0F2E3D);
+          }
+
+          .distill-site-footer a:hover {
+            color: var(--hover-color, white);
+          }</style>
+          <script src="/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/library/rmarkdown/rmd/h/pandoc/header-attrs.js"></script>
+    
+    
+  </head>
+  <body>
+
+          <!--radix_placeholder_navigation_before_body-->
+          <header class="header header--fixed" role="banner">
+          <nav class="distill-site-nav distill-site-header">
+          <div class="nav-left">
+          <a href="index.html" class="title">Gerson Julcarima A.</a>
+          </div>
+          <div class="nav-right">
+          <a href="index.html">Home</a>
+          <a href="research.html">Publications</a>
+          <a href="divulgation.html">Presentations</a>
+          <a>
+          <i class="fas fa-adjust" aria-hidden="true"></i>
+          </a>
+          <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+          </div>
+          </nav>
+          </header>
+          <!--/radix_placeholder_navigation_before_body-->
+          <!--radix_placeholder_site_before_body-->
+          <!--/radix_placeholder_site_before_body-->
+    
+    <div class="container d-none d-lg-block d-xl-block">
+      <div class="row mt-5">
+        <div class="col-7 mt-5">
+          <h1>Gerson Julcarima A.</h1>
+          <hr style="max-width: 200px; margin-left:0;" style="width:60%;"/>
+          <div class="my-3" id="icon-list">
+            <ul class="list-inline">
+                            <li class="list-inline-item">
+                <a href=https://orcid.org/0000-0002-6262-2230>
+                  <button type="button" class="btn btn-outline-dark mb-2">
+                    <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:17px;width:17px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></svg> ORCID
+                  </button>
+                </a>
+              </li>
+                            <li class="list-inline-item">
+                <a href=https://www.researchgate.net/profile/Gerson-Julcarima>
+                  <button type="button" class="btn btn-outline-dark mb-2">
+                    <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:17px;width:14.88px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg> Research Gate
+                  </button>
+                </a>
+              </li>
+                            <li class="list-inline-item">
+                <a href=https://shorturl.at/wFUW0>
+                  <button type="button" class="btn btn-outline-dark mb-2">
+                    <svg aria-hidden="true" role="img" viewBox="0 0 488 512" style="height:17px;width:16.2px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg> Google Scholar
+                  </button>
+                </a>
+              </li>
+                            <li class="list-inline-item">
+                <a href=mailto:gersonjulcarima@gmail.com>
+                  <button type="button" class="btn btn-outline-dark mb-2">
+                    <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:17px;width:17px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg> Email
+                  </button>
+                </a>
+              </li>
+                          </ul>
+          </div>
+        </div>
+
+        <div class="col mr-4 mt-5">
+          <img src="imagens/foto4.jpeg" style="height:15rem" class="rounded float-right">
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col">
+          <div id="bio" class="section level2">
+          <h2>Bio</h2>
+          <p>I’m a PhD student and research assistant in the <a href="https://www.ualberta.ca/political-science/index.html">Department of Political Science at the University of Alberta</a>. I received a bachelor’s degree in Social Sciences with a major in Sociology from the Universidad Nacional Mayor de San Marcos (UNMSM) and a M.A. in Political Science from <a href="https://www.ulethbridge.ca/artsci/political-science">the University of Lethbridge</a> (Alberta, Canada).</p>
+          <p>Furthermore, I’m currently an affiliated researcher at the <a href="http://www.iepa.org.pe/">Instituto de Estudios Políticos Andinos (IEPA)</a> and also coordinator of the Certificate Program in Religion and Politics at the <a href="https://csociales.unmsm.edu.pe/">Faculty of Social Sciences at UNMSM</a>.</p>
+          <div style="display: grid; grid-template-columns: 50% 50%; grid-column-gap: 30px; line-height: 1.5rem;">
+          <div id="education" class="section level5">
+          <h5>Education</h5>
+          <p><i class="fa fa-graduation-cap" aria-hidden="true"></i> M.A. in Poitical Science </br> <small> University of Lethbridge, Canada </small> </br> <i class="fa fa-graduation-cap" aria-hidden="true"></i> BA in Sociology </br> <small> National University of San Marcos, 2009. Peru </small></p>
+          </div>
+          <div id="past-positions" class="section level5">
+          <h5>Past positions</h5>
+          <p><i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching Assistant </br> <small> University of Lethbridge, Canada </small> </br> <i class="fa fa-graduation-cap" aria-hidden="true"></i> Adjunct Professor </br> <small> University of Lima, Peru </small> </br></p>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-block d-lg-none d-xl-none">
+      <div class="d-flex flex-row justify-content-center">
+        <div class="d-flex flex-col">
+          <div class="mx-auto">
+            <div class="p-3 mt-3 text-center">
+              <img src="imagens/foto4.jpeg" style="height:15rem" class="rounded">
+            </div>
+            <div class="p-2 text-center">
+              <h1>Gerson Julcarima A.</h1>
+            </div>
+            <hr style="width:60%;"/>
+
+            <div class="row justify-content-center align-items-center">
+              <div class="col-8 p-1 text-center">
+                <div class="list-group">
+                                    <a href=https://orcid.org/0000-0002-6262-2230>
+                    <button type="button" class="list-group-item list-group-item-action my-1 rounded" style="background-color: #f5e9dd; color: black;border-color: black;">
+                      <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:17px;width:17px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M294.75 188.19h-45.92V342h47.47c67.62 0 83.12-51.34 83.12-76.91 0-41.64-26.54-76.9-84.67-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.79 360.76h-29.84v-207.5h29.84zm-14.92-231.14a19.57 19.57 0 1 1 19.57-19.57 19.64 19.64 0 0 1-19.57 19.57zM300 369h-81V161.26h80.6c76.73 0 110.44 54.83 110.44 103.85C410 318.39 368.38 369 300 369z"/></svg> ORCID
+                    </button>
+                  </a>
+                                    <a href=https://www.researchgate.net/profile/Gerson-Julcarima>
+                    <button type="button" class="list-group-item list-group-item-action my-1 rounded" style="background-color: #f5e9dd; color: black;border-color: black;">
+                      <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:17px;width:14.88px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"/></svg> Research Gate
+                    </button>
+                  </a>
+                                    <a href=https://shorturl.at/wFUW0>
+                    <button type="button" class="list-group-item list-group-item-action my-1 rounded" style="background-color: #f5e9dd; color: black;border-color: black;">
+                      <svg aria-hidden="true" role="img" viewBox="0 0 488 512" style="height:17px;width:16.2px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg> Google Scholar
+                    </button>
+                  </a>
+                                    <a href=mailto:gersonjulcarima@gmail.com>
+                    <button type="button" class="list-group-item list-group-item-action my-1 rounded" style="background-color: #f5e9dd; color: black;border-color: black;">
+                      <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:17px;width:17px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg> Email
+                    </button>
+                  </a>
+                                  </div>
+              </div>
+            </div>
+            <div class="mt-4 mb-5 mx-2">
+              <div id="bio" class="section level2">
+              <h2>Bio</h2>
+              <p>I’m a PhD student and research assistant in the <a href="https://www.ualberta.ca/political-science/index.html">Department of Political Science at the University of Alberta</a>. I received a bachelor’s degree in Social Sciences with a major in Sociology from the Universidad Nacional Mayor de San Marcos (UNMSM) and a M.A. in Political Science from <a href="https://www.ulethbridge.ca/artsci/political-science">the University of Lethbridge</a> (Alberta, Canada).</p>
+              <p>Furthermore, I’m currently an affiliated researcher at the <a href="http://www.iepa.org.pe/">Instituto de Estudios Políticos Andinos (IEPA)</a> and also coordinator of the Certificate Program in Religion and Politics at the <a href="https://csociales.unmsm.edu.pe/">Faculty of Social Sciences at UNMSM</a>.</p>
+              <div style="display: grid; grid-template-columns: 50% 50%; grid-column-gap: 30px; line-height: 1.5rem;">
+              <div id="education" class="section level5">
+              <h5>Education</h5>
+              <p><i class="fa fa-graduation-cap" aria-hidden="true"></i> M.A. in Poitical Science </br> <small> University of Lethbridge, Canada </small> </br> <i class="fa fa-graduation-cap" aria-hidden="true"></i> BA in Sociology </br> <small> National University of San Marcos, 2009. Peru </small></p>
+              </div>
+              <div id="past-positions" class="section level5">
+              <h5>Past positions</h5>
+              <p><i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching Assistant </br> <small> University of Lethbridge, Canada </small> </br> <i class="fa fa-graduation-cap" aria-hidden="true"></i> Adjunct Professor </br> <small> University of Lima, Peru </small> </br></p>
+              </div>
+              </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+          <!--radix_placeholder_site_after_body-->
+          <script>
+          const darkmodeToggle = document.getElementsByClassName("fas fa-adjust")[0];
+          let theme = localStorage.getItem("theme");
+
+          if (!theme) {
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches ) {
+              theme = "dark";
+            } else {
+              theme = "light";
+            }
+          }
+          setTheme();
+
+          function switchTheme() {
+            if (theme === "light") {
+              theme = "dark";
+            } else {
+              theme = "light";
+            }
+            localStorage.setItem("theme", theme);
+            setTheme();
+            console.log(theme);
+          }
+
+          function setTheme() {
+            if (theme === "dark") {
+              document.body.classList.add('darkmode');
+            } else {
+              document.body.classList.remove('darkmode');
+            }
+          }
+
+          darkmodeToggle.addEventListener('click', switchTheme)
+          </script>
+          <!--/radix_placeholder_site_after_body-->
+          <!--radix_placeholder_navigation_after_body-->
+          <!--/radix_placeholder_navigation_after_body-->
+    
+  </body>
 </html>

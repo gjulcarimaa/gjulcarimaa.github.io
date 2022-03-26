@@ -1,30 +1,19 @@
-name: “Gerson Julcarima Alvarez”
-navbar:
-  title: 
-  left:
-  right:
-    - text: Home 
-      icon: fa-home
-      href: index.html  
-    - text: Articles 
-      icon: fa-file-alt
-      href: articles.html
-    - text: Other Publications
-      icon: fa-book
-      href: others.html  
-    - text: Research
-      icon: fa-briefcase
-      href: research.html      
+name: "."
+title: "Gerson Julcarima A."
+theme: theme_dark.css
 output_dir: "."
-output:
-  html_document:
-    theme: lumen  
-    highlight: textmate
+navbar:
+  search: false
+  right:
+    - text: "Home"
+      href: index.html
+    - text: 'Publications'
+      href: research.html
+    - text: 'Presentations'
+      href: divulgation.html
+    - icon: fas fa-adjust
+output: 
+  distill::distill_article:
     includes:
-       in_header: GA_file.html
-
-
-# https://fontawesome.com/icons?d=gallery
-# http://bl.ocks.org/hempro00/6ce58ddc46407185e148
-#    include:
-#      after_body: footer.html
+      in_header: "header.html"
+      after_body: "_afterbody.html"

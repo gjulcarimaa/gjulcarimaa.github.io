@@ -1,211 +1,59 @@
 ---
-title: "Gerson Julcarima A." #espaço:\_\_\_\_\_ 
+title: "Gerson Julcarima A."
+image: "imagens/foto4.jpeg"
+site: distill::distill_website
+links:
+  - label: '`r fontawesome::fa("orcid", height = "17px")` ORCID'
+    url: https://orcid.org/0000-0002-6262-2230
+  - label: '`r fontawesome::fa("researchgate", height = "17px")` Research Gate'
+    url: https://www.researchgate.net/profile/Gerson-Julcarima
+  - label: '`r fontawesome::fa("google", height = "17px")` Google Scholar'
+    url: https://shorturl.at/wFUW0
+  - label: '`r fontawesome::fa("envelope", height = "17px")` Email'
+    url: "mailto:gersonjulcarima@gmail.com"
 output:
-  html_document:
-    fig_width: 1
-    
+  postcards::solana
 ---
 
-<style type="text/css">
-.nav.navbar-nav.navbar-right a {
-    color: #FB9039;
-}
-.navbar {
-  background-color:#1F3044;
-  border-color:#FB9039;
-}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 
-.navbar-nav>li:hover {
-    color: #333;
-    background-color:#FB9039;
-}
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
 
-body{ /* Normal  */
-      font-size: 15px;
-      background-color: white
-   
-  }
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+## Bio
 
 
-h1.title {
-  font-size: 25px;
-  color: #1F3044;
-  font-weight: bold;
-}
+I’m a PhD student and research assistant in the [Department of Political Science at the University of Alberta](https://www.ualberta.ca/political-science/index.html). I received a bachelor’s degree in Social Sciences with a major in Sociology from the Universidad Nacional Mayor de San Marcos (UNMSM) and a M.A. in Political Science from [the University of Lethbridge](https://www.ulethbridge.ca/artsci/political-science) (Alberta, Canada). 
 
-<!-- h1 { /* Header 1 */ -->
-<!--   font-size: 28px; -->
-<!--   color: #FB9039; -->
-<!-- } -->
-<!-- h2 { /* Header 2 */ -->
-<!--     font-size: 22px; -->
-<!--   color: DarkBlue; -->
-<!-- } -->
-<!-- h3 { /* Header 3 */ -->
-<!--   font-size: 18px; -->
-<!--   font-family: "Times New Roman", Times, serif; -->
-<!--   color: #FB9039; -->
-<!-- } -->
-<!-- code.r{ /* Code block */ -->
-<!--     font-size: 12px; -->
-<!-- } -->
-<!-- pre { /* Code block - determines code spacing between lines */ -->
-<!--     font-size: 14px; -->
-<!-- } -->
-
-</style>
-
-<style>
-
-.column {
-    float: left;
-    padding: 10px;
-
-}
-
-.left {
-  width: 30%;
- /*padding-left: 5px;*/
-
-}
+Furthermore, I’m currently an affiliated researcher at the [Instituto de Estudios Políticos Andinos (IEPA)](http://www.iepa.org.pe/) and also coordinator of the Certificate Program in Religion and Politics at the [Faculty of Social Sciences at UNMSM](https://csociales.unmsm.edu.pe/). 
 
 
-.middle {
-  width: 70%;
-  /*padding-right: 10px;*/
+:::: {style="display: grid; grid-template-columns: 50% 50%; grid-column-gap: 30px; line-height: 1.5rem;"}
 
-}
+::: {}
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+##### Education
 
-.separador1{
-    height:10px;
-    clear: both;
-}
-    
-.separador2{
-    width:3%;
-    height: 1px;
-    float:left;
-}
-
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    /*width: 70%;*/ 
-}
-
-.column-left{
-  float: left;
-  width: 20 %;
-  text-align: center;
-}
-.column-right{
-  float: right;
-  width: 70%;
-  text-align: left;
-}
-.column-center2{
-  float: left;
-  width: 33%;
-  text-align: left;
-}
-
-.column-left2{
-  float: left;
-  width: 33%;
-  text-align: left;
-}
-
-.column-right2{
-  float: left;
-  width: 33%;
-  text-align: left;
-}
-.column{
-  float:left;
-  width: 100%;
-  text-align: left;
-} 
-.column-f1{
-  float: left;
-  width: 20%;
-  text-align: left;
-}
-.column-f2{
-  float: right;
-  width: 20%;
-  text-align: right;
-}
-
-</style>
-
-<link href="site_libs/academicons-1.9.1/css/academicons.min.css" rel="stylesheet" />
-
-<div class="column-left">
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> M.A. in Poitical Science </br> <small> University of Lethbridge, Canada </small> </br>
+<i class="fa fa-graduation-cap" aria-hidden="true"></i>   BA in Sociology </br> <small> National University of San Marcos, 2009. Peru </small> 
 
 
-![<a href="cv.pdf"> <i class="ai ai-cv-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a> <a href= https://scholar.google.com/citations?hl=en&user=_U9-CyoAAAAJ > <i class="ai ai-google-scholar-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>
-<a href= https://orcid.org/0000-0002-6262-2230 > <i class="ai ai-orcid-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>
-<a href= https://www.researchgate.net/profile/Gerson_Julcarima > <i class="ai ai-researchgate-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a> <a href= https://uleth.academia.edu/GersonJulcarima%C3%81lvarez> <i class="ai ai-academia-square fa-2x" aria-hidden="true" style="color:#FB9039"></i></a>](imagens/foto2.jpg)
+:::
+
+::: {}
 
 
+##### Past positions
 
-<style>
-  img {
-    display: block;
-    border-radius: 10%;
-    height: 235px;
-    width: 200px; 
-  }
-  
-</style>
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching Assistant </br> <small> University of Lethbridge, Canada </small> </br>
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> Adjunct Professor </br> <small> University of Lima, Peru </small> </br>
 
 
-<span style="color:#1F3044"> **CONTACT**  </br>
-<i class="fa fa-envelope" aria-hidden="true"></i> 
-g.julcarima _at_ </i> icloud.com </span>
-
-</div>
-
-<div class="column-right">
-
-<span style="color:#1F3044"> **M.A. in Political Science** </span> </br>
-<span style="color:#1F3044"> **Department of Political Science ** </span> </br> <span style="color:#1F3044"> **University of Lethbridge, Alberta, Canada** </span></p>
-
-I completed my undergraduate studies in sociology at the Universidad Nacional Mayor de San Marcos in Lima (Peru), and then I also pursued postgraduate studies at the Catholic University of Peru and the Methodist University of San Pablo (Brazil). 
-
-From 2013 to 2018, I was an adjunct professor at the University of Lima.
-
-Currently, I am also a research associate of the Instituto de Estudios Políticos Andinos.
-
-</span>
-
-<div class="separador1"> </div> 
-
-<div class="column-left2">
-
-<span style="color:#FB9039"> **Education** </span>
-
-<i class="fa fa-graduation-cap" aria-hidden="true"></i>   M.A. in Political Science </br> <small> Pontifical Catholic University of Peru, Peru </small>  </br>
-<i class="fa fa-graduation-cap" aria-hidden="true"></i>   B.A. in Sociology </br> <small> National University of San Marcos, Peru. </small> 
-</div>
-
-
-<div class="column-center2">
-<span style="color:#FB9039"> **Past positions** </span>
-
-<i class="fa fa-graduation-cap" aria-hidden="true"></i> Adjunct Professor </br> <small> University of Lima, </br> Peru </small> </br>
-<i class="fa fa-graduation-cap" aria-hidden="true"></i> Teaching Assistant </br> <small> University of Lethbridge, </br> Canada </small> </br>
-</div>
-
-<div class="column-right2">
-<span style="color:#FB9039"> **Interests** </span> </br> 
-<i class="fa fa-graduation-cap" aria-hidden="true"></i> Semi-presidentialism in new democracies </br> 
-<i class="fa fa-graduation-cap" aria-hidden="true"></i> Institutionalization of Parties and Party Systems </br> 
-<i class="fa fa-graduation-cap" aria-hidden="true"></i> Religion and Politics </br> 
-</div>
+:::
+::::
