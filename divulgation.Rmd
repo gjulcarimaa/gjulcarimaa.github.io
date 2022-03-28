@@ -63,6 +63,10 @@ and of Governability School - National Court of Elections, Lima, Peru, 23 June -
 
 <li> [*¿Gobernar desde el Congreso?*](http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/), **Instituto de Estudios Políticos Andinos**, 14 de Febrero, 2021. \medskip </li>
 
+<iframe width="100%" height="150px" src="http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/"></iframe>
+
+
+
 ```{r}
 knitr::include_url("http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/")
 ```
