@@ -40,8 +40,8 @@ Furthermore, I’m currently an affiliated researcher at the [Instituto de Estud
 
 ##### Education
 
-<i class="fa fa-graduation-cap" aria-hidden="true"></i> M.A. in Poitical Science </br> <small> University of Lethbridge, Canada </small> </br>
-<i class="fa fa-graduation-cap" aria-hidden="true"></i>   BA in Sociology </br> <small> National University of San Marcos, 2009. Peru </small> 
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> M.A. in Poitical Science </br> <small> University of Lethbridge, Alberta, Canada </small> </br>
+<i class="fa fa-graduation-cap" aria-hidden="true"></i>   BA in Sociology </br> <small> National University of San Marcos, Lima, Peru </small> 
 
 
 :::
