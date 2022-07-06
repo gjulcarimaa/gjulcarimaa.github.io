@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -766,10 +767,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1601,6 +1598,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1615,6 +1618,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1714,6 +1742,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1736,7 +1766,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2431,7 +2461,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
   <link href="site_libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
   <script src="site_libs/panelset-0.2.6/panelset.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
@@ -2508,87 +2538,150 @@ img {
 <div class="layout-chunk" data-layout="l-page">
 <p><style>.panelset{--panel-tab-foreground: honeydew;--panel-tab-background: #0F2E3D;}</style></p>
 </div>
-<p>Research Interest: Indigenous politics, semi-presidentialism in new democracies, parties and party systems, and religion and politics.</p>
+<p>Research Interest: Indigenous politics, semi-presidentialism in new
+democracies, parties and party systems, and religion and politics.</p>
 <div class="panelset">
 <div class="panel">
 <h4 class="panel-name" id="articles">Articles</h4>
 <h4 id="peer-reviewed-articles">PEER-REVIEWED ARTICLES</h4>
 <li>
-<a href="https://www.sciencedirect.com/science/article/abs/pii/S026137942100130X"><em>Does the monetary cost of abstaining increase turnout? Causal evidence from Peru</em></a>. <strong>Electoral Studies</strong>, Volume 75, February 2022 [with German Feierherd and Gudalupe Tuñon]
+<a
+href="https://www.sciencedirect.com/science/article/abs/pii/S026137942100130X"><em>Does
+the monetary cost of abstaining increase turnout? Causal evidence from
+Peru</em></a>. <strong>Electoral Studies</strong>, Volume 75, February
+2022 [with German Feierherd and Gudalupe Tuñon]
 </li>
 <p></p>
 <li>
-<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/Revista-Elecciones-18.pdf"><em>Burn the Ballot Box for a Fair Election: Electoral Violence, Mineral Royalties, and National Oversight in Peruvian Municipal Elections</em></a>. <strong>Elecciones</strong>, vol. 17, Nro. 18, 2018, pp. 11-52 [with Anthony Pezzola]
+<a
+href="http://www.onpe.gob.pe/modEducacion/Publicaciones/Revista-Elecciones-18.pdf"><em>Burn
+the Ballot Box for a Fair Election: Electoral Violence, Mineral
+Royalties, and National Oversight in Peruvian Municipal
+Elections</em></a>. <strong>Elecciones</strong>, vol. 17, Nro. 18, 2018,
+pp. 11-52 [with Anthony Pezzola]
 </li>
 <p></p>
 <li>
-<a href="https://www.web.onpe.gob.pe/modEducacion/Publicaciones/Revista-Elecciones-16.pdf"><em>Peruvian Democracy according to the Electoral Process 2016: Challenges and Limitations of Institutional Framework</em></a>. <strong>Elecciones</strong>, vol. 15, Nro. 16, 2016, pp. 53-76. [with Manuel Valenzuela]
+<a
+href="https://www.web.onpe.gob.pe/modEducacion/Publicaciones/Revista-Elecciones-16.pdf"><em>Peruvian
+Democracy according to the Electoral Process 2016: Challenges and
+Limitations of Institutional Framework</em></a>.
+<strong>Elecciones</strong>, vol. 15, Nro. 16, 2016, pp. 53-76. [with
+Manuel Valenzuela]
 </li>
 <p></p>
 <h5 id="other-articles">OTHER ARTICLES</h5>
+<li>
+<a
+href="https://cedepperu.org/publicaciones/revista-socialismo-y-participacion"><em>El
+ciudadano evangélico. Un esbozo historico-interpretativo sobre la
+construccion de la identidad social de los protestantes en el
+Perú</em></a>. <strong>Socialismo y Participación</strong>, 1 (100),
+pp. 149–172.
+</li>
+<p></p>
+<li>
+<a
+href="https://revistas.ucsp.edu.pe/index.php/Allpanchis/article/view/507/514"><em>El
+pentecostalismo y la toma de tierras en Cerro de Pasco
+(1958-1967)</em></a>. <strong>Allpanchis</strong>, 37 (65), pp. 99–108.
+</li>
+<p></p>
 </div>
 <section id="book-chapters" class="panel-name panel">
 <h4 class="panel-name">Book Chapters</h4>
 <li>
-<a href="https://www.onpe.gob.pe/modEducacion/Publicaciones/ciudadania-politico.pdf"><em>¿Afecta la “forma de gobierno” el funcionamiento de la democracia representativa? Algunas reflexiones a partir del caso peruano</em></a>. In Joan Lara Amat y León (editor), <strong>La ciudadanía y lo político. Ciudadanía y crisis de la democracia liberal en un mundo en transformación</strong>. Lima: ONPE, Fac. de Letras y Ciencias Humanas y Escuela de Ciencia Política de la Univ. Nac. Mayor de San Marcos, 2020, pp. 179-186.
+<a
+href="https://www.onpe.gob.pe/modEducacion/Publicaciones/ciudadania-politico.pdf"><em>¿Afecta
+la “forma de gobierno” el funcionamiento de la democracia
+representativa? Algunas reflexiones a partir del caso peruano</em></a>.
+In Joan Lara Amat y León (editor), <strong>La ciudadanía y lo político.
+Ciudadanía y crisis de la democracia liberal en un mundo en
+transformación</strong>. Lima: ONPE, Fac. de Letras y Ciencias Humanas y
+Escuela de Ciencia Política de la Univ. Nac. Mayor de San Marcos, 2020,
+pp. 179-186.
 </li>
 <li>
-<a href="https://www.onpe.gob.pe/modEducacion/Publicaciones/sanciones-multas-abstencionismo.pdf"><em>Multas electorales, ausentismo y participación electoral en el Perú (2002-2018</em></a>. In Manuel Valenzuela (coord.), <strong>Sanciones, multas y abstencionismo electoral en el Perú. Tres estudios sobre participación electoral y voto obligatorio</strong>. Lima: ONPE, 2019, pp. 137-174. [with Germán Feierherd y Guadalupe Tuñon] 
+<a
+href="https://www.onpe.gob.pe/modEducacion/Publicaciones/sanciones-multas-abstencionismo.pdf"><em>Multas
+electorales, ausentismo y participación electoral en el Perú
+(2002-2018</em></a>. In Manuel Valenzuela (coord.), <strong>Sanciones,
+multas y abstencionismo electoral en el Perú. Tres estudios sobre
+participación electoral y voto obligatorio</strong>. Lima: ONPE, 2019,
+pp. 137-174. [with Germán Feierherd y Guadalupe Tuñon]
 </li>
 <li>
-<a href="http://www.librosperuanos.com/libros/detalle/9770/Politicas-divinas-Religion-diversidad-y-politica-en-el-Peru-contemporaneo"><em>Elecciones y Evangélicos en el Perú (1979-2006)</em></a>. In Fernando Armas y otros (editores). <strong>Religión y poder en el Perú republicano</strong>. Lima: Instituto Riva- Agüero–PUCP, 2008, pp. 387-410. [Republished in Sánchez, Marte y Manuel Valenzuela (editores). Democracia, Participación y representación Electoral en el Perú. Lima: ONPE, 2020, pp. 97-118]
+<a
+href="http://www.librosperuanos.com/libros/detalle/9770/Politicas-divinas-Religion-diversidad-y-politica-en-el-Peru-contemporaneo"><em>Elecciones
+y Evangélicos en el Perú (1979-2006)</em></a>. In Fernando Armas y otros
+(editores). <strong>Religión y poder en el Perú republicano</strong>.
+Lima: Instituto Riva- Agüero–PUCP, 2008, pp. 387-410. [Republished in
+Sánchez, Marte y Manuel Valenzuela (editores). Democracia, Participación
+y representación Electoral en el Perú. Lima: ONPE, 2020, pp. 97-118]
 </li>
 </section>
 <section id="ongoing-work" class="panel-name panel">
 <h4 class="panel-name">Ongoing Work</h4>
 <li>
-<em>La movilización electoral de las identidades étnicas en el Perú</em> 
+<em>La movilización electoral de las identidades étnicas en el Perú</em>
 </li>
 <li>
-<em>The Ministers and the Ballot Boxes: Implications of the Evangelicals’ Electoral Mobilization in Peru</em> 
+<em>The Ministers and the Ballot Boxes: Implications of the
+Evangelicals’ Electoral Mobilization in Peru</em>
 </li>
 <li>
-<em>Electoral conflicts and local democracy in Peru (2010-2018) (with J.P. Milanese and J. Tarrillo)</em> 
+<em>Electoral conflicts and local democracy in Peru (2010-2018) (with
+J.P. Milanese and J. Tarrillo)</em>
 </li>
 </section>
 <section id="working-papers" class="panel-name panel">
 <h4 class="panel-name">Working Papers</h4>
-<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/dt-actas.pdf" target="_blank"> <img align="left" src="imagens/actas.jpg" / > </a></p>
+<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/dt-actas.pdf" target="_blank">
+<img align="left" src="imagens/actas.jpg" / > </a></p>
 <div class="separador2">
 
 </div>
-<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/conflictos_book.pdf" target="_blank"> <img align="left" src="imagens/conflictos.jpg" / > </a></p>
+<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/conflictos_book.pdf" target="_blank">
+<img align="left" src="imagens/conflictos.jpg" / > </a></p>
 <div class="separador2">
 
 </div>
-<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/L-0081.pdf" target="_blank"> <img align="left" src="imagens/conflictos2.jpg" / > </a></p>
+<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/L-0081.pdf" target="_blank">
+<img align="left" src="imagens/conflictos2.jpg" / > </a></p>
 <div class="separador2">
 
 </div>
-<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/L-0058.pdf" target="_blank"> <img align="left" src="imagens/competencia.jpg" / > </a> <br></p>
+<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/L-0058.pdf" target="_blank">
+<img align="left" src="imagens/competencia.jpg" / > </a> <br></p>
 <div class="separador1">
 
 </div>
-<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/DT-27Miembros_Omisos.pdf" target="_blank"> <img align="left" src="imagens/miembros.jpg" / > </a></p>
+<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/DT-27Miembros_Omisos.pdf" target="_blank">
+<img align="left" src="imagens/miembros.jpg" / > </a></p>
 <div class="separador2">
 
 </div>
-<p><a href="https://www.iidh.ed.cr/multic/UserFiles/Biblioteca/CAPEL/3_2011/27d471f8-848e-4708-a58f-9476d9da982a.pdf" target="_blank"> <img align="left" src="imagens/estructura.jpg" / > </a></p>
+<p><a href="https://www.iidh.ed.cr/multic/UserFiles/Biblioteca/CAPEL/3_2011/27d471f8-848e-4708-a58f-9476d9da982a.pdf" target="_blank">
+<img align="left" src="imagens/estructura.jpg" / > </a></p>
 <div class="separador2">
 
 </div>
-<p><a href="https://www.iidh.ed.cr/multic/UserFiles/Biblioteca/CAPEL/11_2012/bb0775ec-0982-407c-aa81-d60f5b3bbfa9.pdf" target="_blank"> <img align="left" src="imagens/Cultura.jpg" / > </a></p>
+<p><a href="https://www.iidh.ed.cr/multic/UserFiles/Biblioteca/CAPEL/11_2012/bb0775ec-0982-407c-aa81-d60f5b3bbfa9.pdf" target="_blank">
+<img align="left" src="imagens/Cultura.jpg" / > </a></p>
 <div class="separador2">
 
 </div>
-<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/DT-26Percepciones_sobre_la_gestion.pdf" target="_blank"> <img align="left" src="imagens/Percepciones.jpg" / > </a></p>
+<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/DT-26Percepciones_sobre_la_gestion.pdf" target="_blank">
+<img align="left" src="imagens/Percepciones.jpg" / > </a></p>
 <div class="separador1">
 
 </div>
-<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/reporte_01.pdf" target="_blank"> <img align="left" src="imagens/NT.GIF" / > </a></p>
+<p><a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/reporte_01.pdf" target="_blank">
+<img align="left" src="imagens/NT.GIF" / > </a></p>
 </section>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
