@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -766,10 +767,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1601,6 +1598,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1615,6 +1618,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1714,6 +1742,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1736,7 +1766,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2431,7 +2461,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
   <link href="site_libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
   <script src="site_libs/panelset-0.2.6/panelset.js"></script>
   <link href="site_libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
@@ -2492,12 +2522,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="layout-chunk" data-layout="l-page">
 <p><style>.panelset{--panel-tab-foreground: honeydew;--panel-tab-background: #0F2E3D;}</style></p>
 </div>
-<p>Recent participation in conferences, seminars, workshops, interviews and the latest opinion pieces.</p>
+<p>Recent participation in conferences, seminars, workshops, interviews
+and the latest opinion pieces.</p>
 <div class="panelset">
 <section id="guest-speaker" class="panel-name panel">
 <h4 class="panel-name">Guest Speaker</h4>
 <li>
-<strong>Disccusant</strong>: <em>Conservadurismo Religioso y Política en el Perú: Una revisión histórica</em>, Conferencias Religión y Política, Diplomado en Religión y Política, Unidad de Pos Grado - UNMSM, February 22, 2022.
+<strong>Speaker</strong>: <em>¿Hacia un resurgimiento de la identidad
+“Quechua”?</em>, Limateca - Colectivo Apu Sharu,August, 2022.
+</li>
+<li>
+<strong>Disccusant</strong>: <em>Conservadurismo Religioso y Política en
+el Perú: Una revisión histórica</em>, Conferencias Religión y Política,
+Diplomado en Religión y Política, Unidad de Pos Grado - UNMSM, February
+22, 2022.
 </li>
 <div class="layout-chunk" data-layout="l-body">
 <div class="vembedr" align="center">
@@ -2507,7 +2545,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 </div>
 <li>
-<strong>Interviewed</strong>: <em>Perspectivas para analizar el rol de los partidos políticos</em>, POLITEAMA, December 27, 2021.
+<strong>Interviewed</strong>: <em>Perspectivas para analizar el rol de
+los partidos políticos</em>, POLITEAMA, December 27, 2021.
 </li>
 <div class="layout-chunk" data-layout="l-body">
 <div class="vembedr" align="center">
@@ -2517,7 +2556,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 </div>
 <li>
-<strong>Speaker</strong>: <em>Los límites de entender la democracia como “democracia liberal”</em>, Sesión 3, Diálogos DEMOS, Universidad Nacional Mayor de San Marcos and Fundación Friedrich Ebert (FES) , October 2, 2021.
+<strong>Speaker</strong>: <em>Los límites de entender la democracia como
+“democracia liberal”</em>, Sesión 3, Diálogos DEMOS, Universidad
+Nacional Mayor de San Marcos and Fundación Friedrich Ebert (FES) ,
+October 2, 2021.
 </li>
 <div class="layout-chunk" data-layout="l-body">
 <div class="vembedr" align="center">
@@ -2530,32 +2572,46 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <section id="workshops" class="panel-name panel">
 <h4 class="panel-name">Workshops</h4>
 <li>
-<strong>An Introduction to Electoral Studies</strong>. Workshop on Electoral Systems and Political Parties - Department of Political Science at National University of San Marcos, Lima, Peru, 24 and 31 July, 2021. <em>(online)</em>.
+<strong>An Introduction to Electoral Studies</strong>. Workshop on
+Electoral Systems and Political Parties - Department of Political
+Science at National University of San Marcos, Lima, Peru, 24 and 31
+July, 2021. <em>(online)</em>.
 </li>
 <p></p>
 <li>
-<strong>Workshop on Research Methodology in Electoral Studies</strong> Electoral and of Governability School - National Court of Elections, Lima, Peru, 23 June - 5 July, <em>(online)</em>.
+<strong>Workshop on Research Methodology in Electoral Studies</strong>
+Electoral and of Governability School - National Court of Elections,
+Lima, Peru, 23 June - 5 July, <em>(online)</em>.
 </li>
 <p></p>
 </section>
 <section id="opinion-pieces" class="panel-name panel">
 <h4 class="panel-name">Opinion Pieces</h4>
 <li>
-<a href="http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/"><em>¿Gobernar desde el Congreso?</em></a>, <strong>Instituto de Estudios Políticos Andinos</strong>, 14 de Febrero, 2021. 
+<a
+href="http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/"><em>¿Gobernar
+desde el Congreso?</em></a>, <strong>Instituto de Estudios Políticos
+Andinos</strong>, 14 de Febrero, 2021.
 </li>
 <div class="layout-chunk" data-layout="l-body">
 <iframe src="http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/" width="624" height="400px" data-external="1">
 </iframe>
 </div>
 <li>
-<a href="https://diariouno.pe/crisis-o-sinceramiento-de-la-representacion-politica-en-el-peru/"><em>¿Crisis o sinceramiento de la representación política en el Perú?</em></a>, <strong>Diario Uno</strong>, 16 de Enero, 2020. 
+<a
+href="https://diariouno.pe/crisis-o-sinceramiento-de-la-representacion-politica-en-el-peru/"><em>¿Crisis
+o sinceramiento de la representación política en el Perú?</em></a>,
+<strong>Diario Uno</strong>, 16 de Enero, 2020.
 </li>
 <div class="layout-chunk" data-layout="l-body">
 <iframe src="https://diariouno.pe/crisis-o-sinceramiento-de-la-representacion-politica-en-el-peru/" width="624" height="400px" data-external="1">
 </iframe>
 </div>
 <li>
-<a href="https://presidential-power.net/?p=9608"><em>The Brazilian presidential election of 2018: Does a cartel of parties produce mavericks?</em></a>, <strong>Presidential Power</strong>, May 22th, 2019. 
+<a href="https://presidential-power.net/?p=9608"><em>The Brazilian
+presidential election of 2018: Does a cartel of parties produce
+mavericks?</em></a>, <strong>Presidential Power</strong>, May 22th,
+2019.
 </li>
 <div class="layout-chunk" data-layout="l-body">
 <iframe src="https://presidential-power.net/?p=9608" width="624" height="400px" data-external="1">
@@ -2563,7 +2619,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 </section>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

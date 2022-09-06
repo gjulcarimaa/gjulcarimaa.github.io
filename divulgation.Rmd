@@ -23,6 +23,7 @@ library(vembedr)
 
 knitr::opts_chunk$set(echo = FALSE)
 ```
+<li> **Speaker**: *¿Hacia un resurgimiento de la identidad "Quechua"?*, Limateca - Colectivo Apu Sharu,August, 2022.</li>
 
 <li> **Disccusant**: *Conservadurismo Religioso y Política en el Perú: Una revisión histórica*, Conferencias Religión y Política, Diplomado en Religión y Política, Unidad de Pos Grado - UNMSM, February 22, 2022. </li>
 ```{r}
