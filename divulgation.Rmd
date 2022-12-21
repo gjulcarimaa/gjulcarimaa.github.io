@@ -23,7 +23,17 @@ library(vembedr)
 
 knitr::opts_chunk$set(echo = FALSE)
 ```
-<li> **Speaker**: *¿Hacia un resurgimiento de la identidad "Quechua"?*, Limateca - Colectivo Apu Sharu,August, 2022.</li>
+<li> **Moderator**: *Roundtable "Peruvian Crisis: Reasons and Outcomes"*, University of Alberta, Canada, December 19, 2022.</li>
+```{r}
+
+```
+
+<li> **Speaker**: *¿Hacia un resurgimiento de la identidad "Quechua"?*, Limateca - Colectivo Apu Sharu,August 11, 2022.</li>
+```{r}
+embed_url("https://www.youtube.com/watch?v=QJ0oVHcxk_g") %>%
+  use_align("center") %>% use_start_time("28m53s")
+```
+
 
 <li> **Disccusant**: *Conservadurismo Religioso y Política en el Perú: Una revisión histórica*, Conferencias Religión y Política, Diplomado en Religión y Política, Unidad de Pos Grado - UNMSM, February 22, 2022. </li>
 ```{r}
