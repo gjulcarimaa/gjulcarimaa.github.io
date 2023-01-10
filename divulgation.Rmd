@@ -72,6 +72,12 @@ and of Governability School - National Court of Elections, Lima, Peru, 23 June -
 
 #### Opinion Pieces {.panel-name}
 
+<li> [*Democracy as neoliberalism’s caboose*](https://www.pressenza.com/2023/01/democracy-as-neoliberalisms-caboose/), **Pressenza - International Press Agency Instituto de Estudios Políticos Andinos**, January 8, 2023. \medskip </li>
+
+```{r}
+knitr::include_url("https://www.pressenza.com/2023/01/democracy-as-neoliberalisms-caboose/")
+```
+
 <li> [*¿Gobernar desde el Congreso?*](http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/), **Instituto de Estudios Políticos Andinos**, 14 de Febrero, 2021. \medskip </li>
 
 ```{r}
@@ -86,7 +92,7 @@ knitr::include_url("https://diariouno.pe/crisis-o-sinceramiento-de-la-representa
 ```
 
 
-<li> [*The Brazilian presidential election of 2018: Does a cartel of parties produce mavericks?*](https://presidential-power.net/?p=9608), **Presidential Power**, May 22th, 2019. \medskip </li>   
+<li> [*The Brazilian presidential election of 2018: Does a cartel of parties produce mavericks?*](https://presidential-power.net/?p=9608), **Presidential Power**, May 22, 2019. \medskip </li>   
 
 ```{r}
 knitr::include_url("https://presidential-power.net/?p=9608")
