@@ -74,7 +74,7 @@ and of Governability School - National Court of Elections, Lima, Peru, 23 June -
 
 <li> [*Democracy as neoliberalism’s caboose*](https://www.pressenza.com/2023/01/democracy-as-neoliberalisms-caboose/), **Pressenza - International Press Agency**, January 8, 2023. \medskip </li>
 
-```{r, out.extra="data-external=1"}
+```{r}
 knitr::include_url("https://www.pressenza.com/2023/01/democracy-as-neoliberalisms-caboose/")
 ```
 
