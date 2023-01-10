@@ -78,6 +78,11 @@ and of Governability School - National Court of Elections, Lima, Peru, 23 June -
 knitr::include_url("https://www.pressenza.com/2023/01/democracy-as-neoliberalisms-caboose/")
 ```
 
+```{r, out.width=720, out.extra='style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay"'}
+knitr::include_url("https://ntu.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=894e2520-46b3-4c7e-9666-acbc00eee050&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all", height = 405)
+```
+
+
 <li> [*¿Gobernar desde el Congreso?*](http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/), **Instituto de Estudios Políticos Andinos**, 14 de Febrero, 2021. \medskip </li>
 
 ```{r}
