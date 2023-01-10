@@ -74,13 +74,13 @@ and of Governability School - National Court of Elections, Lima, Peru, 23 June -
 
 <li> [*Democracy as neoliberalism’s caboose*](https://www.pressenza.com/2023/01/democracy-as-neoliberalisms-caboose/), **Pressenza - International Press Agency Instituto de Estudios Políticos Andinos**, January 8, 2023. \medskip </li>
 
-```{r}
+```{r, out.extra="data-external=1"}
 knitr::include_url("https://www.pressenza.com/2023/01/democracy-as-neoliberalisms-caboose/")
 ```
 
 <li> [*¿Gobernar desde el Congreso?*](http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/), **Instituto de Estudios Políticos Andinos**, 14 de Febrero, 2021. \medskip </li>
 
-```{r}
+```{r, out.extra="data-external=1"}
 knitr::include_url("http://www.iepa.org.pe/gobernar-desde-el-congreso-i-gerson-julcarima-alvarez/")
 ```
 
