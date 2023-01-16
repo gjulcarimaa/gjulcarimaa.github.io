@@ -3,6 +3,7 @@ title: "Presentations"
 output:
   distill::distill_article:
     toc: false
+    self_contained: false
 ---
 
 ```{r panelset, layout='l-page', echo=FALSE}
