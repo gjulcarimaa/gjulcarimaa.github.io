@@ -1,6 +1,6 @@
 ---
 title: "Gerson Julcarima A."
-image: "imagens/foto4.jpeg"
+image: "imagens/fotito.jpeg"
 site: distill::distill_website
 links:
   - label: '`r fontawesome::fa("orcid", height = "17px")` ORCID'
