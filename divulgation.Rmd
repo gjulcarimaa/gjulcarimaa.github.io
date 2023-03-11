@@ -24,32 +24,31 @@ library(vembedr)
 
 knitr::opts_chunk$set(echo = FALSE)
 ```
+<li> **Speaker**: *El voto religioso en las últimas elecciones en América Latina: los casos de Argentina y Perú*, Unidad de Posgrado-Facultad de Ciencias Sociales, UNMSM, March 7, 2023.  </li>
+``` {r}
+embed_url("https://www.youtube.com/watch?v=-_TsyiBxIFY") %>%
+  use_align("center") %>% use_start_time("42m50s")
+```
 <li> **Moderator**: *Roundtable "Peruvian Crisis: Reasons and Outcomes"*, University of Alberta, Canada, December 19, 2022.</li>
 ```{r}
 
 ```
-
 <li> **Speaker**: *¿Hacia un resurgimiento de la identidad "Quechua"?*, Limateca - Colectivo Apu Sharu,August 11, 2022.</li>
 ```{r}
 embed_url("https://www.youtube.com/watch?v=QJ0oVHcxk_g") %>%
   use_align("center") %>% use_start_time("28m53s")
 ```
-
-
 <li> **Disccusant**: *Conservadurismo Religioso y Política en el Perú: Una revisión histórica*, Conferencias Religión y Política, Diplomado en Religión y Política, Unidad de Pos Grado - UNMSM, February 22, 2022. </li>
 ```{r}
 embed_url("https://www.youtube.com/watch?v=liU94Fc6taA") %>%
   use_align("center") %>% use_start_time("1h4m38s")
 ```
-
 <li> **Interviewed**: *Perspectivas para analizar el rol de los partidos políticos*, POLITEAMA, December 27, 2021. </li>
 ```{r}
 embed_url("https://www.youtube.com/watch?v=bgiNMujQ07s&t=1134s") %>%
   use_align("center")
 ```
-
 <li> **Speaker**: *Los límites de entender la democracia como "democracia liberal"*, Sesión 3, Diálogos DEMOS, Universidad Nacional Mayor de San Marcos and Fundación Friedrich Ebert (FES) , October 2, 2021.</li>
-
 ```{r}
 embed_url("https://www.youtube.com/watch?v=zZsSJEwRCcY") %>%
   use_align("center")  %>% use_start_time("1h33m45s")
