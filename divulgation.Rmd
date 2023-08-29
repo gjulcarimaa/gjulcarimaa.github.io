@@ -72,6 +72,13 @@ and of Governability School - National Court of Elections, Lima, Peru, 23 June -
 
 #### Opinion Pieces {.panel-name}
 
+<li> [*No hay estado, ni nación*](https://www.noticiasser.pe/no-hay-estado-ni-nacion), **NoticiasSer.Pe**, August 4, 2023. \medskip </li>
+
+```{r}
+knitr::include_url("https://www.noticiasser.pe/no-hay-estado-ni-nacion")
+```
+
+
 <li> [*Democracy as neoliberalism’s caboose*](https://www.pressenza.com/2023/01/democracy-as-neoliberalisms-caboose/), **Pressenza - International Press Agency**, January 8, 2023. \medskip </li>
 
 ```{r}
@@ -84,11 +91,11 @@ knitr::include_graphics("imagens/pressenza.jpg")
 knitr::include_graphics(knitr::include_graphics("imagens/IEPA.jpg"))
 ```
 
-<li> [*¿Crisis o sinceramiento de la representación política en el Perú?*](https://diariouno.pe/crisis-o-sinceramiento-de-la-representacion-politica-en-el-peru/), **Diario Uno**, 16 de Enero, 2020. \medskip </li>
+<li> [*¿Crisis o sinceramiento de la representación política en el Perú?*](https://propuestapais.pe/noticia/crisis-o-sinceramiento-de-la-representacion-politica-en-el-peru/), **Propuesta País**, 5 de Enero, 2020. [published also in **Diario Uno**, 16 de Enero, 2020. \medskip </li>
 
 
 ```{r}
-knitr::include_url("https://diariouno.pe/crisis-o-sinceramiento-de-la-representacion-politica-en-el-peru/")
+knitr::include_url("https://propuestapais.pe/noticia/crisis-o-sinceramiento-de-la-representacion-politica-en-el-peru/")
 ```
 
 
