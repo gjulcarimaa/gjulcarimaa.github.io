@@ -58,10 +58,10 @@ Research Interest: Indigenous politics, semi-presidentialism in new democracies,
 
 #### Book Chapters {.panel-name}
 
-<li> [*¿Afecta la “forma de gobierno” el funcionamiento de la democracia representativa? Algunas reflexiones a partir del caso peruano*](https://www.onpe.gob.pe/modEducacion/Publicaciones/ciudadania-politico.pdf). In Joan Lara Amat y León (editor), **La ciudadanía y lo político. Ciudadanía y crisis de la democracia liberal en un mundo en transformación**. Lima: ONPE, Fac. de Letras y Ciencias Humanas y Escuela de Ciencia Política de la Univ. Nac. Mayor de San Marcos, 2020, pp. 179-186.\medskip </li>
+<li> [*¿Afecta la “forma de gobierno” el funcionamiento de la democracia representativa? Algunas reflexiones a partir del caso peruano*](https://cdn.www.gob.pe/uploads/document/file/2128693/La%20ciudadan%C3%ADa%20y%20lo%20pol%C3%ADtico.pdf?v=1629846218). In Joan Lara Amat y León (editor), **La ciudadanía y lo político. Ciudadanía y crisis de la democracia liberal en un mundo en transformación**. Lima: ONPE, Fac. de Letras y Ciencias Humanas y Escuela de Ciencia Política de la Univ. Nac. Mayor de San Marcos, 2020, pp. 179-186.\medskip </li>
 
 
-<li> [*Multas electorales, ausentismo y participación electoral en el Perú (2002-2018*](https://www.onpe.gob.pe/modEducacion/Publicaciones/sanciones-multas-abstencionismo.pdf). In Manuel Valenzuela (coord.), **Sanciones, multas y abstencionismo electoral en el Perú. Tres estudios sobre participación electoral y voto obligatorio**. Lima: ONPE, 2019, pp. 137-174. [with Germán Feierherd y Guadalupe Tuñon] \medskip </li>
+<li> [*Multas electorales, ausentismo y participación electoral en el Perú (2002-2018*](https://www.gob.pe/institucion/onpe/informes-publicaciones/2136481-sanciones-multas-y-abstencionismo-electoral-en-el-peru-tres-estudios-sobre-participacion-electoral-y-voto-obligatorio). In Manuel Valenzuela (coord.), **Sanciones, multas y abstencionismo electoral en el Perú. Tres estudios sobre participación electoral y voto obligatorio**. Lima: ONPE, 2019, pp. 137-174. [with Germán Feierherd y Guadalupe Tuñon] \medskip </li>
 
 <li> [*Elecciones y Evangélicos en el Perú (1979-2006)*](http://www.librosperuanos.com/libros/detalle/9770/Politicas-divinas-Religion-diversidad-y-politica-en-el-Peru-contemporaneo). In Fernando Armas y otros (editores). **Religión y poder en el Perú republicano**. Lima: Instituto Riva-
 Agüero–PUCP, 2008, pp. 387-410. [Republished in Sánchez, Marte y Manuel Valenzuela (editores). Democracia, Participación y representación Electoral en el Perú. Lima: ONPE, 2020, pp. 97-118] </li>
@@ -90,47 +90,47 @@ Agüero–PUCP, 2008, pp. 387-410. [Republished in Sánchez, Marte y Manuel Val
 
 #### Working Papers {.panel-name}
 
-<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/dt-actas.pdf" target="_blank">
+<a href="https://www.gob.pe/institucion/onpe/informes-publicaciones/2136571-actas-electorales-observadas-en-las-elecciones-generales-analisis-de-sus-escenarios-y-actores" target="_blank">
 <img align="left" src="imagens/actas.jpg" / >
 </a>
 
 <div class="separador2"> </div> 
 
-<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/conflictos_book.pdf" target="_blank"> <img align="left" src="imagens/conflictos.jpg" / >
+<a href="https://www.gob.pe/institucion/onpe/informes-publicaciones/2136593-conflictos-electorales-en-el-ambito-local-estudio-de-las-acciones-violentas-y-elaboracion-de-un-mapa-nacional" target="_blank"> <img align="left" src="imagens/conflictos.jpg" / >
 </a>
 
 <div class="separador2"> </div> 
 
-<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/L-0081.pdf" target="_blank">
+<a href="https://www.gob.pe/institucion/onpe/informes-publicaciones/2136564-conflictos-y-violencia-electoral-en-el-ambito-subnacional-analisis-de-los-hechos-registrados-en-los-procesos-electorales-de-2010-y-2011" target="_blank">
 <img align="left" src="imagens/conflictos2.jpg" / >
 </a>
 
 <div class="separador2"> </div> 
 
-<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/L-0058.pdf" target="_blank"> <img align="left" src="imagens/competencia.jpg" / >
+<a href="https://www.gob.pe/institucion/onpe/informes-publicaciones/2136591-competencia-electoral-en-el-ambito-provincial-escenarios-y-tacticas-de-oferta-politica-durante-las-elecciones-regionales-y-municipales" target="_blank"> <img align="left" src="imagens/competencia.jpg" / >
 </a>
 <br>
 
 <div class="separador1"> </div> 
 
-<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/DT-27Miembros_Omisos.pdf" target="_blank"> <img align="left" src="imagens/miembros.jpg" / >
+<a href="https://www.gob.pe/institucion/onpe/informes-publicaciones/2136570-miembros-de-mesa-omisos-una-aproximacion-a-sus-caracteristicas-y-causas-2006-2011" target="_blank"> <img align="left" src="imagens/miembros.jpg" / >
 </a>
 
 
 <div class="separador2"> </div> 
 
-<a href="https://www.iidh.ed.cr/multic/UserFiles/Biblioteca/CAPEL/3_2011/27d471f8-848e-4708-a58f-9476d9da982a.pdf" target="_blank"> <img align="left" src="imagens/estructura.jpg" / >
+<a href="https://www.gob.pe/institucion/onpe/informes-publicaciones/2136598-estructura-democracia-y-financiamiento-de-los-partidos-politicos-una-mirada-a-traves-de-sus-estatutos" target="_blank"> <img align="left" src="imagens/estructura.jpg" / >
 </a>
 
 <div class="separador2"> </div> 
 
-<a href="https://www.iidh.ed.cr/multic/UserFiles/Biblioteca/CAPEL/11_2012/bb0775ec-0982-407c-aa81-d60f5b3bbfa9.pdf" target="_blank">
+<a href="https://www.gob.pe/institucion/onpe/informes-publicaciones/2136592-institucionalidad-democratica-y-cultura-electoral-en-los-procesos-electorales-de-las-organizaciones-sociales-la-asistencia-tecnica-de-la-onpe-2008-2" target="_blank">
 <img align="left" src="imagens/Cultura.jpg" / >
 </a>
 
 <div class="separador2"> </div> 
 
-<a href="http://www.onpe.gob.pe/modEducacion/Publicaciones/DT-26Percepciones_sobre_la_gestion.pdf" target="_blank"> <img align="left" src="imagens/Percepciones.jpg" / >
+<a href="https://www.gob.pe/institucion/onpe/informes-publicaciones/2136582-percepciones-sobre-la-gestion-electoral-en-el-peru-un-analisis-de-las-elecciones-generales-2011" target="_blank"> <img align="left" src="imagens/Percepciones.jpg" / >
 </a>
 
 <div class="separador1"> </div> 
