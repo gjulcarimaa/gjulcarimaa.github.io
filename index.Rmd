@@ -9,7 +9,7 @@ links:
     url: https://www.researchgate.net/profile/Gerson-Julcarima
   - label: '`r fontawesome::fa("google", height = "17px")` Google Scholar'
     url: https://shorturl.at/wFUW0
-  - label: '`r fontawesome::fa("envelope", height = "17px")` Email'
+  - label: '`r fontawesome::fa("id-card", height = "17px")` Renacyt'
     url: "mailto:gersonjulcarima@gmail.com"
 output:
   postcards::solana
