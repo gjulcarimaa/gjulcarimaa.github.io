@@ -24,6 +24,16 @@ library(vembedr)
 
 knitr::opts_chunk$set(echo = FALSE)
 ```
+<li> **Speaker**: *Elecciones Municipales Complementarias de Centros Poblados 2023*, Martes Electoral, Escuela Electoral y de Gobernabilidad, December 13, 2023.  </li>
+``` {r}
+embed_url("https://www.youtube.com/watch?v=56dFvBzFzBY") %>%
+  use_align("center") %>% use_start_time("4m25s")
+```
+<li> **Speaker**: *Pueblos Indígenas y Representación Política*, Seminario Internacional - Los organismos electorales y el estado de la democracia en AL - JNE (Perú), OEP (Bolivia) y CNE (Ecuador), September 15, 2023.  </li>
+``` {r}
+embed_url("https://www.youtube.com/watch?v=gqH1vwKLlb0") %>%
+  use_align("center") %>% use_start_time("1h48m44s")
+```
 <li> **Speaker**: *El voto religioso en las últimas elecciones en América Latina: los casos de Argentina y Perú*, Unidad de Posgrado-Facultad de Ciencias Sociales, UNMSM, March 7, 2023.  </li>
 ``` {r}
 embed_url("https://www.youtube.com/watch?v=-_TsyiBxIFY") %>%
