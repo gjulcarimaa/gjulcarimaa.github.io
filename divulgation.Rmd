@@ -24,12 +24,12 @@ library(vembedr)
 
 knitr::opts_chunk$set(echo = FALSE)
 ```
-<li> **Speaker**: *Elecciones Municipales Complementarias de Centros Poblados 2023*, Martes Electoral, Escuela Electoral y de Gobernabilidad, December 13, 2023.  </li>
+<li> **Speaker**: *Un Balance de las Elecciones Municipales Complementarias de Centros Poblados 2023*, Martes Electoral, Escuela Electoral y de Gobernabilidad, Jurado Nacional de Elecciones, December 13, 2023.  </li>
 ``` {r}
 embed_url("https://www.youtube.com/watch?v=56dFvBzFzBY") %>%
   use_align("center") %>% use_start_time("4m25s")
 ```
-<li> **Speaker**: *Pueblos Indígenas y Representación Política*, Seminario Internacional - Los organismos electorales y el estado de la democracia en AL - JNE (Perú), OEP (Bolivia) y CNE (Ecuador), September 15, 2023.  </li>
+<li> **Speaker**: *Pueblos Indígenas y Representación Política*, Seminario Internacional: Los organismos electorales y el estado de la democracia en AL, Jurado Nacional de Elecciones (Perú), Órgano Electoral Plurinacional (Bolivia) y Consejo Nacional Electoral (Ecuador), September 15, 2023.  </li>
 ``` {r}
 embed_url("https://www.youtube.com/watch?v=gqH1vwKLlb0") %>%
   use_align("center") %>% use_start_time("1h48m44s")
